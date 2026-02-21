@@ -1,1 +1,53 @@
 @import "tailwindcss";
+
+@theme {
+  --color-stone-50: #fafaf9;
+  --color-stone-100: #f5f5f4;
+  --color-stone-200: #e7e5e4;
+  --color-stone-300: #d6d3d1;
+  --color-stone-400: #a8a29e;
+  --color-stone-500: #78716c;
+  --color-stone-600: #57534e;
+  --color-stone-700: #44403c;
+  --color-stone-800: #292524;
+  --color-stone-900: #1c1917;
+
+  --color-sage-50: #f2f5f0;
+  --color-sage-100: #e4ebe0;
+  --color-sage-200: #c8d7c1;
+  --color-sage-300: #a3bc99;
+  --color-sage-400: #7a9e6e;
+  --color-sage-500: #5a7d50;
+  --color-sage-600: #456340;
+  --color-sage-700: #374f33;
+  --color-sage-800: #2c3f29;
+  --color-sage-900: #243322;
+
+  --color-clay-50: #fdf6f0;
+  --color-clay-100: #faeadb;
+  --color-clay-200: #f4d0b5;
+  --color-clay-300: #ecb085;
+  --color-clay-400: #e08a52;
+  --color-clay-500: #d46b2e;
+  --color-clay-600: #b85523;
+  --color-clay-700: #964220;
+  --color-clay-800: #7a3620;
+  --color-clay-900: #642e1e;
+
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Lato", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-stone-50);
+  color: var(--color-stone-800);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+}

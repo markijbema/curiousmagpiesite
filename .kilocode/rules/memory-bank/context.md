@@ -14,23 +14,30 @@ The template is a clean Next.js 16 starter with TypeScript and Tailwind CSS 4. I
 - [x] ESLint configuration
 - [x] Memory bank documentation
 - [x] Recipe system for common features
+- [x] Built full Curious Magpie ceramics website (4 pages + components)
 
 ## Current Structure
 
 | File/Directory | Purpose | Status |
 |----------------|---------|--------|
-| `src/app/page.tsx` | Home page | ✅ Ready |
-| `src/app/layout.tsx` | Root layout | ✅ Ready |
-| `src/app/globals.css` | Global styles | ✅ Ready |
+| `src/app/page.tsx` | Home page with hero, about, featured products, CTA | ✅ Done |
+| `src/app/layout.tsx` | Root layout with Navigation + Footer | ✅ Done |
+| `src/app/globals.css` | Global styles with sage/clay/stone palette + Playfair/Lato fonts | ✅ Done |
+| `src/app/producten/page.tsx` | Products overview with 6 products + placeholders | ✅ Done |
+| `src/app/agenda/page.tsx` | Markets agenda with upcoming + past dates | ✅ Done |
+| `src/app/contact/page.tsx` | Contact page with email + Instagram | ✅ Done |
+| `src/components/Navigation.tsx` | Sticky nav with mobile hamburger menu | ✅ Done |
+| `src/components/Footer.tsx` | Footer with links + Instagram | ✅ Done |
 | `.kilocode/` | AI context & recipes | ✅ Ready |
 
 ## Current Focus
 
-The template is ready. Next steps depend on user requirements:
+Website is live for Curious Magpie ceramics atelier (Marjolein IJbema).
 
-1. What type of application to build
-2. What features are needed
-3. Design/branding preferences
+Pending user actions:
+1. Replace placeholder images with real product photos
+2. Update email address in contact page (currently info@curiousmagpie.nl)
+3. Update market dates in agenda page as needed
 
 ## Quick Start Guide
 
