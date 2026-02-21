@@ -1,41 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-  --color-stone-50: #fafaf9;
-  --color-stone-100: #f5f5f4;
-  --color-stone-200: #e7e5e4;
-  --color-stone-300: #d6d3d1;
-  --color-stone-400: #a8a29e;
-  --color-stone-500: #78716c;
-  --color-stone-600: #57534e;
-  --color-stone-700: #44403c;
-  --color-stone-800: #292524;
-  --color-stone-900: #1c1917;
+  /* Fiep Westendorp / retro 50s-60s palette */
+  --color-cream: #fdf8f0;
+  --color-warm-white: #fffef8;
 
-  --color-sage-50: #f2f5f0;
-  --color-sage-100: #e4ebe0;
-  --color-sage-200: #c8d7c1;
-  --color-sage-300: #a3bc99;
-  --color-sage-400: #7a9e6e;
-  --color-sage-500: #5a7d50;
-  --color-sage-600: #456340;
-  --color-sage-700: #374f33;
-  --color-sage-800: #2c3f29;
-  --color-sage-900: #243322;
+  /* Playful primaries */
+  --color-poppy: #e8392a;       /* red */
+  --color-sunflower: #f5c842;   /* yellow */
+  --color-sky: #4a9fd4;         /* blue */
+  --color-grass: #5aaa5a;       /* green */
+  --color-tangerine: #f07d2a;   /* orange */
+  --color-lilac: #b87fc4;       /* purple */
 
-  --color-clay-50: #fdf6f0;
-  --color-clay-100: #faeadb;
-  --color-clay-200: #f4d0b5;
-  --color-clay-300: #ecb085;
-  --color-clay-400: #e08a52;
-  --color-clay-500: #d46b2e;
-  --color-clay-600: #b85523;
-  --color-clay-700: #964220;
-  --color-clay-800: #7a3620;
-  --color-clay-900: #642e1e;
+  /* Soft pastels */
+  --color-blush: #f9d4cc;
+  --color-mint: #c8e8c8;
+  --color-butter: #fdf0a8;
+  --color-powder: #c8dff0;
+  --color-lavender: #e0d0f0;
 
-  --font-serif: "Playfair Display", Georgia, serif;
-  --font-sans: "Lato", system-ui, sans-serif;
+  /* Ink / outline */
+  --color-ink: #1a1008;
+  --color-ink-soft: #3a2818;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Lato", system-ui, sans-serif;
 }
 
 html {
@@ -43,11 +33,44 @@ html {
 }
 
 body {
-  background-color: var(--color-stone-50);
-  color: var(--color-stone-800);
-  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
+}
+
+/* Wiggly border effect */
+.wiggly-border {
+  border: 3px solid var(--color-ink);
+  border-radius: 2px 8px 3px 7px / 6px 2px 8px 3px;
+}
+
+/* Stamp / badge style */
+.stamp {
+  border: 3px solid currentColor;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-5deg);
+}
+
+/* Dotted background pattern */
+.dot-bg {
+  background-image: radial-gradient(circle, #d4c8b0 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Stripe pattern */
+.stripe-bg {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 6px,
+    rgba(245, 200, 66, 0.15) 6px,
+    rgba(245, 200, 66, 0.15) 12px
+  );
 }

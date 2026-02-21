@@ -1,136 +1,216 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const featuredProducts = [
   {
     title: "Dansende Vrouwenfiguur",
-    description: "Een sierlijk vrouwtje dat in de wind zwiert, op een paal in de tuin.",
-    placeholder: "bg-stone-200",
+    description: "Zwiert vrolijk in de wind op een paal in de tuin.",
+    color: "#f9d4cc",
+    accent: "#e8392a",
+    icon: "✿",
   },
   {
     title: "Tuinpaddestoelen",
-    description: "Vrolijke keramieke paddestoelen voor tussen het groen.",
-    placeholder: "bg-stone-300",
+    description: "Vrolijke paddestoelen voor tussen het groen.",
+    color: "#c8e8c8",
+    accent: "#5aaa5a",
+    icon: "❧",
   },
   {
     title: "Groentestekers",
     description: "Handgemaakte stekers voor in de moestuin.",
-    placeholder: "bg-stone-200",
+    color: "#fdf0a8",
+    accent: "#c4881e",
+    icon: "✦",
   },
 ];
 
+function PlaceholderBox({
+  bg,
+  accent,
+  icon,
+  className = "",
+}: {
+  bg: string;
+  accent: string;
+  icon: string;
+  className?: string;
+}) {
+  return (
+    <div
+      className={`flex flex-col items-center justify-center gap-3 ${className}`}
+      style={{
+        backgroundColor: bg,
+        border: `3px solid #1a1008`,
+        borderRadius: "4px 12px 4px 12px",
+      }}
+    >
+      <span style={{ fontSize: "2.5rem", color: accent }}>{icon}</span>
+      <span style={{ fontSize: "0.75rem", color: "#6a5040", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase" }}>
+        Foto volgt
+      </span>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
-    <main>
-      {/* Hero */}
-      <section className="relative bg-stone-100 overflow-hidden">
-        <div className="max-w-5xl mx-auto px-6 py-20 md:py-32 grid md:grid-cols-2 gap-12 items-center">
+    <main style={{ backgroundColor: "#fdf8f0" }}>
+
+      {/* ── HERO ── */}
+      <section
+        className="dot-bg"
+        style={{ borderBottom: "3px solid #1a1008" }}
+      >
+        <div className="max-w-5xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-sm uppercase tracking-widest text-stone-500 mb-3">
-              Handgemaakt keramiek
-            </p>
+            {/* Badge */}
+            <div
+              className="inline-block mb-6 px-4 py-1.5"
+              style={{
+                backgroundColor: "#f5c842",
+                border: "2.5px solid #1a1008",
+                borderRadius: "20px",
+                fontSize: "0.7rem",
+                fontWeight: 700,
+                letterSpacing: "0.2em",
+                textTransform: "uppercase",
+                color: "#1a1008",
+                transform: "rotate(-1deg)",
+                display: "inline-block",
+              }}
+            >
+              ✦ Handgemaakt keramiek ✦
+            </div>
+
             <h1
-              className="text-5xl md:text-6xl text-stone-800 leading-tight mb-6"
-              style={{ fontFamily: "var(--font-serif)" }}
+              style={{
+                fontFamily: "var(--font-display)",
+                fontSize: "clamp(3rem, 8vw, 5rem)",
+                lineHeight: 1.05,
+                color: "#1a1008",
+                marginBottom: "1.5rem",
+              }}
             >
               Curious
               <br />
-              <span className="text-sage-600" style={{ color: "#5a7d50" }}>
-                Magpie
-              </span>
+              <span style={{ color: "#e8392a" }}>Magpie</span>
             </h1>
-            <p className="text-lg text-stone-600 leading-relaxed mb-8 max-w-md">
+
+            <p
+              style={{
+                fontSize: "1.1rem",
+                lineHeight: 1.7,
+                color: "#3a2818",
+                maxWidth: "28rem",
+                marginBottom: "2rem",
+              }}
+            >
               Keramiek voor buiten, geïnspireerd op de natuur. Elk stuk is met
               de hand gemaakt door Marjolein IJbema in haar atelier.
             </p>
-            <div className="flex flex-wrap gap-4">
+
+            <div className="flex flex-wrap gap-3">
               <Link
                 href="/producten"
-                className="inline-block bg-stone-800 text-stone-50 px-6 py-3 text-sm tracking-wide hover:bg-stone-700 transition-colors"
+                style={{
+                  display: "inline-block",
+                  backgroundColor: "#e8392a",
+                  color: "#fdf8f0",
+                  padding: "12px 28px",
+                  border: "2.5px solid #1a1008",
+                  borderRadius: "30px",
+                  fontWeight: 700,
+                  fontSize: "0.85rem",
+                  letterSpacing: "0.05em",
+                  textDecoration: "none",
+                  boxShadow: "3px 3px 0 #1a1008",
+                }}
               >
-                Bekijk producten
+                Bekijk producten →
               </Link>
               <Link
-                href="/contact"
-                className="inline-block border border-stone-400 text-stone-700 px-6 py-3 text-sm tracking-wide hover:border-stone-600 hover:text-stone-900 transition-colors"
+                href="/agenda"
+                style={{
+                  display: "inline-block",
+                  backgroundColor: "#f5c842",
+                  color: "#1a1008",
+                  padding: "12px 28px",
+                  border: "2.5px solid #1a1008",
+                  borderRadius: "30px",
+                  fontWeight: 700,
+                  fontSize: "0.85rem",
+                  letterSpacing: "0.05em",
+                  textDecoration: "none",
+                  boxShadow: "3px 3px 0 #1a1008",
+                }}
               >
-                Neem contact op
+                Agenda ✦
               </Link>
             </div>
           </div>
 
-          {/* Hero image placeholder */}
-          <div className="relative aspect-[4/5] bg-stone-200 rounded-sm overflow-hidden shadow-lg">
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-stone-400 gap-2">
-              <svg
-                className="w-12 h-12"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1}
-                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                />
-              </svg>
-              <span className="text-sm">Foto volgt</span>
-            </div>
-          </div>
+          {/* Hero image */}
+          <PlaceholderBox
+            bg="#c8dff0"
+            accent="#4a9fd4"
+            icon="✿"
+            className="aspect-[4/5] shadow-lg"
+          />
         </div>
-
-        {/* Decorative element */}
-        <div
-          className="absolute bottom-0 left-0 right-0 h-1"
-          style={{ background: "linear-gradient(to right, #a3bc99, #ecb085, #a3bc99)" }}
-        />
       </section>
 
-      {/* About / Description */}
+      {/* ── ABOUT ── */}
       <section className="max-w-5xl mx-auto px-6 py-20">
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          {/* Image placeholder */}
-          <div className="relative aspect-square bg-stone-100 rounded-sm overflow-hidden shadow-md order-2 md:order-1">
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-stone-400 gap-2">
-              <svg
-                className="w-10 h-10"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1}
-                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                />
-              </svg>
-              <span className="text-sm">Foto volgt</span>
-            </div>
-          </div>
+          <PlaceholderBox
+            bg="#c8e8c8"
+            accent="#5aaa5a"
+            icon="❧"
+            className="aspect-square order-2 md:order-1"
+          />
 
           <div className="order-1 md:order-2">
-            <p className="text-sm uppercase tracking-widest text-stone-400 mb-3">
-              Over het atelier
-            </p>
-            <h2
-              className="text-3xl md:text-4xl text-stone-800 mb-6"
-              style={{ fontFamily: "var(--font-serif)" }}
+            {/* Section label */}
+            <div
+              className="inline-block mb-4 px-3 py-1"
+              style={{
+                backgroundColor: "#c8e8c8",
+                border: "2px solid #1a1008",
+                borderRadius: "4px",
+                fontSize: "0.65rem",
+                fontWeight: 700,
+                letterSpacing: "0.2em",
+                textTransform: "uppercase",
+                color: "#1a1008",
+              }}
             >
-              Natuur als inspiratie
+              Over het atelier
+            </div>
+
+            <h2
+              style={{
+                fontFamily: "var(--font-display)",
+                fontSize: "2.5rem",
+                color: "#1a1008",
+                marginBottom: "1.25rem",
+                lineHeight: 1.15,
+              }}
+            >
+              Natuur als
+              <br />
+              <span style={{ color: "#5aaa5a" }}>inspiratie</span>
             </h2>
-            <div className="space-y-4 text-stone-600 leading-relaxed">
+
+            <div style={{ display: "flex", flexDirection: "column", gap: "1rem", color: "#3a2818", lineHeight: 1.75, fontSize: "0.95rem" }}>
               <p>
                 In mijn atelier maak ik keramiek dat zijn thuis vindt in de
                 buitenlucht. Tuinen, terrassen en moestuinen worden mooier met
-                een handgemaakt stukje aardewerk dat de seizoenen trotsert.
+                een handgemaakt stukje aardewerk.
               </p>
               <p>
                 De natuur is mijn grootste inspiratiebron: de ronde vormen van
                 een slak, de grappige hoed van een paddestoel, de sierlijkheid
-                van een vrouwenfiguur die danst in de wind. Elk stuk vertelt
-                een eigen verhaal.
+                van een vrouwenfiguur die danst in de wind.
               </p>
               <p>
                 Alles wordt met de hand gemaakt en met zorg afgewerkt, zodat
@@ -141,16 +221,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured products */}
-      <section className="bg-stone-100 py-20">
+      {/* ── FEATURED PRODUCTS ── */}
+      <section
+        className="stripe-bg py-20"
+        style={{ borderTop: "3px solid #1a1008", borderBottom: "3px solid #1a1008" }}
+      >
         <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <p className="text-sm uppercase tracking-widest text-stone-400 mb-2">
+          {/* Heading with ornament */}
+          <div className="text-center mb-14">
+            <div
+              className="inline-block mb-4 px-4 py-1.5"
+              style={{
+                backgroundColor: "#b87fc4",
+                border: "2.5px solid #1a1008",
+                borderRadius: "20px",
+                fontSize: "0.65rem",
+                fontWeight: 700,
+                letterSpacing: "0.2em",
+                textTransform: "uppercase",
+                color: "#fdf8f0",
+              }}
+            >
               Uit het atelier
-            </p>
+            </div>
             <h2
-              className="text-3xl md:text-4xl text-stone-800"
-              style={{ fontFamily: "var(--font-serif)" }}
+              style={{
+                fontFamily: "var(--font-display)",
+                fontSize: "2.5rem",
+                color: "#1a1008",
+              }}
             >
               Een greep uit de collectie
             </h2>
@@ -158,34 +257,42 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {featuredProducts.map((product) => (
-              <div key={product.title} className="group">
+              <div
+                key={product.title}
+                style={{
+                  backgroundColor: "#fdf8f0",
+                  border: "2.5px solid #1a1008",
+                  borderRadius: "4px 16px 4px 16px",
+                  overflow: "hidden",
+                  boxShadow: "4px 4px 0 #1a1008",
+                }}
+              >
+                {/* Image placeholder */}
                 <div
-                  className={`aspect-square ${product.placeholder} rounded-sm overflow-hidden mb-4 shadow-sm group-hover:shadow-md transition-shadow`}
+                  className="aspect-square flex flex-col items-center justify-center gap-2"
+                  style={{ backgroundColor: product.color, borderBottom: "2.5px solid #1a1008" }}
                 >
-                  <div className="w-full h-full flex flex-col items-center justify-center text-stone-400 gap-2">
-                    <svg
-                      className="w-8 h-8"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1}
-                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                      />
-                    </svg>
-                    <span className="text-xs">Foto volgt</span>
-                  </div>
+                  <span style={{ fontSize: "3rem", color: product.accent }}>{product.icon}</span>
+                  <span style={{ fontSize: "0.7rem", color: "#6a5040", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase" }}>
+                    Foto volgt
+                  </span>
                 </div>
-                <h3
-                  className="text-lg text-stone-800 mb-1"
-                  style={{ fontFamily: "var(--font-serif)" }}
-                >
-                  {product.title}
-                </h3>
-                <p className="text-sm text-stone-500">{product.description}</p>
+                {/* Text */}
+                <div style={{ padding: "1.25rem" }}>
+                  <h3
+                    style={{
+                      fontFamily: "var(--font-display)",
+                      fontSize: "1.2rem",
+                      color: "#1a1008",
+                      marginBottom: "0.4rem",
+                    }}
+                  >
+                    {product.title}
+                  </h3>
+                  <p style={{ fontSize: "0.85rem", color: "#5e3e1a", lineHeight: 1.6 }}>
+                    {product.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -193,64 +300,104 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/producten"
-              className="inline-block border border-stone-400 text-stone-700 px-8 py-3 text-sm tracking-wide hover:bg-stone-800 hover:text-stone-50 hover:border-stone-800 transition-colors"
+              style={{
+                display: "inline-block",
+                backgroundColor: "#fdf8f0",
+                color: "#1a1008",
+                padding: "12px 32px",
+                border: "2.5px solid #1a1008",
+                borderRadius: "30px",
+                fontWeight: 700,
+                fontSize: "0.85rem",
+                letterSpacing: "0.05em",
+                textDecoration: "none",
+                boxShadow: "3px 3px 0 #1a1008",
+              }}
             >
-              Alle producten bekijken
+              Alle producten bekijken →
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Photo strip */}
-      <section className="py-20 max-w-5xl mx-auto px-6">
+      {/* ── PHOTO STRIP ── */}
+      <section className="max-w-5xl mx-auto px-6 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[1, 2, 3, 4].map((i) => (
+          {[
+            { bg: "#f9d4cc", accent: "#e8392a", icon: "✿" },
+            { bg: "#fdf0a8", accent: "#c4881e", icon: "✦" },
+            { bg: "#c8e8c8", accent: "#5aaa5a", icon: "❧" },
+            { bg: "#e0d0f0", accent: "#b87fc4", icon: "✾" },
+          ].map((item, i) => (
             <div
               key={i}
-              className="aspect-square bg-stone-100 rounded-sm overflow-hidden shadow-sm"
+              className="aspect-square flex flex-col items-center justify-center gap-2"
+              style={{
+                backgroundColor: item.bg,
+                border: "2.5px solid #1a1008",
+                borderRadius: i % 2 === 0 ? "4px 14px 4px 14px" : "14px 4px 14px 4px",
+              }}
             >
-              <div className="w-full h-full flex flex-col items-center justify-center text-stone-300 gap-1">
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1}
-                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-                <span className="text-xs">Foto volgt</span>
-              </div>
+              <span style={{ fontSize: "2rem", color: item.accent }}>{item.icon}</span>
+              <span style={{ fontSize: "0.65rem", color: "#6a5040", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase" }}>
+                Foto volgt
+              </span>
             </div>
           ))}
         </div>
       </section>
 
-      {/* CTA banner */}
+      {/* ── CTA BANNER ── */}
       <section
-        className="py-16 text-center"
-        style={{ backgroundColor: "#e4ebe0" }}
+        style={{
+          backgroundColor: "#4a9fd4",
+          borderTop: "3px solid #1a1008",
+          borderBottom: "3px solid #1a1008",
+          padding: "4rem 1.5rem",
+          textAlign: "center",
+        }}
       >
-        <div className="max-w-2xl mx-auto px-6">
-          <h2
-            className="text-3xl text-stone-800 mb-4"
-            style={{ fontFamily: "var(--font-serif)" }}
+        <div className="max-w-2xl mx-auto">
+          <div
+            className="inline-block mb-4"
+            style={{
+              fontSize: "2.5rem",
+              transform: "rotate(-5deg)",
+              display: "inline-block",
+            }}
           >
-            Kom me vinden op de markt
+            📅
+          </div>
+          <h2
+            style={{
+              fontFamily: "var(--font-display)",
+              fontSize: "2.25rem",
+              color: "#fdf8f0",
+              marginBottom: "0.75rem",
+            }}
+          >
+            Kom me vinden op de markt!
           </h2>
-          <p className="text-stone-600 mb-6">
-            Regelmatig sta ik op markten in de regio. Bekijk de agenda voor
-            actuele data.
+          <p style={{ color: "#c8dff0", marginBottom: "1.5rem", fontSize: "1rem" }}>
+            Regelmatig sta ik op markten in de regio. Bekijk de agenda voor actuele data.
           </p>
           <Link
             href="/agenda"
-            className="inline-block bg-stone-800 text-stone-50 px-8 py-3 text-sm tracking-wide hover:bg-stone-700 transition-colors"
+            style={{
+              display: "inline-block",
+              backgroundColor: "#f5c842",
+              color: "#1a1008",
+              padding: "12px 32px",
+              border: "2.5px solid #1a1008",
+              borderRadius: "30px",
+              fontWeight: 700,
+              fontSize: "0.9rem",
+              letterSpacing: "0.05em",
+              textDecoration: "none",
+              boxShadow: "3px 3px 0 #1a1008",
+            }}
           >
-            Bekijk de agenda
+            Bekijk de agenda ✦
           </Link>
         </div>
       </section>

@@ -6,7 +6,6 @@ export const metadata: Metadata = {
     "Bekijk op welke markten en evenementen je Curious Magpie keramiek kunt vinden.",
 };
 
-// Update these dates and locations as needed
 const upcomingMarkets = [
   {
     date: "Zaterdag 15 maart 2025",
@@ -14,6 +13,8 @@ const upcomingMarkets = [
     location: "Vismarkt, Groningen",
     time: "10:00 – 17:00",
     note: "",
+    color: "#f9d4cc",
+    accent: "#e8392a",
   },
   {
     date: "Zondag 6 april 2025",
@@ -21,6 +22,8 @@ const upcomingMarkets = [
     location: "Dorpsplein, Haren",
     time: "09:00 – 14:00",
     note: "Alleen bij droog weer",
+    color: "#fdf0a8",
+    accent: "#c4881e",
   },
   {
     date: "Zaterdag 3 mei 2025",
@@ -28,6 +31,8 @@ const upcomingMarkets = [
     location: "Brink, Assen",
     time: "11:00 – 17:00",
     note: "",
+    color: "#c8e8c8",
+    accent: "#5aaa5a",
   },
   {
     date: "Zondag 18 mei 2025",
@@ -35,6 +40,8 @@ const upcomingMarkets = [
     location: "Tolberterstraat, Leek",
     time: "10:00 – 16:00",
     note: "",
+    color: "#c8dff0",
+    accent: "#4a9fd4",
   },
   {
     date: "Zaterdag 7 juni 2025",
@@ -42,6 +49,8 @@ const upcomingMarkets = [
     location: "Vismarkt, Groningen",
     time: "10:00 – 17:00",
     note: "",
+    color: "#e0d0f0",
+    accent: "#b87fc4",
   },
 ];
 
@@ -60,20 +69,49 @@ const pastMarkets = [
 
 export default function AgendaPage() {
   return (
-    <main>
+    <main style={{ backgroundColor: "#fdf8f0" }}>
       {/* Page header */}
-      <section className="bg-stone-100 py-16 border-b border-stone-200">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-sm uppercase tracking-widest text-stone-400 mb-3">
-            Kom langs
-          </p>
+      <section
+        className="dot-bg"
+        style={{ borderBottom: "3px solid #1a1008", padding: "4rem 1.5rem" }}
+      >
+        <div className="max-w-5xl mx-auto text-center">
+          <div
+            className="inline-block mb-4 px-4 py-1.5"
+            style={{
+              backgroundColor: "#4a9fd4",
+              border: "2.5px solid #1a1008",
+              borderRadius: "20px",
+              fontSize: "0.65rem",
+              fontWeight: 700,
+              letterSpacing: "0.2em",
+              textTransform: "uppercase",
+              color: "#fdf8f0",
+              transform: "rotate(1deg)",
+              display: "inline-block",
+            }}
+          >
+            ✦ Kom langs ✦
+          </div>
           <h1
-            className="text-4xl md:text-5xl text-stone-800 mb-4"
-            style={{ fontFamily: "var(--font-serif)" }}
+            style={{
+              fontFamily: "var(--font-display)",
+              fontSize: "clamp(2.5rem, 6vw, 4rem)",
+              color: "#1a1008",
+              marginBottom: "1rem",
+            }}
           >
             Agenda
           </h1>
-          <p className="text-stone-500 max-w-xl mx-auto leading-relaxed">
+          <p
+            style={{
+              color: "#5e3e1a",
+              maxWidth: "36rem",
+              margin: "0 auto",
+              lineHeight: 1.7,
+              fontSize: "0.95rem",
+            }}
+          >
             Regelmatig sta ik op markten en evenementen in de regio. Hieronder
             vind je de komende data. Volg me ook op Instagram voor de laatste
             updates.
@@ -84,83 +122,117 @@ export default function AgendaPage() {
       {/* Upcoming markets */}
       <section className="max-w-3xl mx-auto px-6 py-16">
         <h2
-          className="text-2xl text-stone-800 mb-8"
-          style={{ fontFamily: "var(--font-serif)" }}
+          style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "1.75rem",
+            color: "#1a1008",
+            marginBottom: "2rem",
+          }}
         >
           Komende markten
         </h2>
 
-        <div className="space-y-4">
+        <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
           {upcomingMarkets.map((market, i) => (
             <div
               key={i}
-              className="border border-stone-200 bg-white rounded-sm p-6 hover:border-stone-300 transition-colors"
+              style={{
+                backgroundColor: "#fdf8f0",
+                border: "2.5px solid #1a1008",
+                borderRadius: "4px 14px 4px 14px",
+                padding: "1.25rem 1.5rem",
+                boxShadow: "3px 3px 0 #1a1008",
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.5rem",
+              }}
             >
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+              {/* Coloured date badge */}
+              <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", flexWrap: "wrap", gap: "0.5rem" }}>
                 <div>
-                  <p className="text-sm font-semibold text-stone-500 uppercase tracking-wide mb-1">
+                  <span
+                    style={{
+                      display: "inline-block",
+                      backgroundColor: market.color,
+                      border: `2px solid ${market.accent}`,
+                      borderRadius: "10px",
+                      padding: "2px 10px",
+                      fontSize: "0.7rem",
+                      fontWeight: 700,
+                      color: "#1a1008",
+                      marginBottom: "0.4rem",
+                    }}
+                  >
                     {market.date}
-                  </p>
+                  </span>
                   <h3
-                    className="text-xl text-stone-800 mb-1"
-                    style={{ fontFamily: "var(--font-serif)" }}
+                    style={{
+                      fontFamily: "var(--font-display)",
+                      fontSize: "1.3rem",
+                      color: "#1a1008",
+                      marginBottom: "0.2rem",
+                    }}
                   >
                     {market.event}
                   </h3>
-                  <p className="text-sm text-stone-500 flex items-center gap-1">
-                    <svg
-                      className="w-4 h-4 flex-shrink-0"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                      />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                      />
-                    </svg>
-                    {market.location}
+                  <p
+                    style={{
+                      fontSize: "0.85rem",
+                      color: "#5e3e1a",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "0.3rem",
+                    }}
+                  >
+                    📍 {market.location}
                   </p>
                   {market.note && (
-                    <p className="text-xs text-stone-400 mt-1 italic">
+                    <p style={{ fontSize: "0.75rem", color: "#a06e28", marginTop: "0.25rem", fontStyle: "italic" }}>
                       * {market.note}
                     </p>
                   )}
                 </div>
-                <div className="flex-shrink-0">
-                  <span
-                    className="inline-block text-sm px-3 py-1 rounded-full text-stone-600"
-                    style={{ backgroundColor: "#e4ebe0" }}
-                  >
-                    {market.time}
-                  </span>
-                </div>
+                <span
+                  style={{
+                    display: "inline-block",
+                    backgroundColor: market.accent,
+                    color: "#fdf8f0",
+                    border: "2px solid #1a1008",
+                    borderRadius: "20px",
+                    padding: "4px 14px",
+                    fontSize: "0.8rem",
+                    fontWeight: 700,
+                    whiteSpace: "nowrap",
+                    flexShrink: 0,
+                  }}
+                >
+                  {market.time}
+                </span>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Instagram follow note */}
+        {/* Instagram note */}
         <div
-          className="mt-10 p-6 rounded-sm text-center"
-          style={{ backgroundColor: "#faeadb" }}
+          style={{
+            marginTop: "2.5rem",
+            backgroundColor: "#fdf0a8",
+            border: "2.5px solid #1a1008",
+            borderRadius: "4px 14px 4px 14px",
+            padding: "1.25rem 1.5rem",
+            textAlign: "center",
+            boxShadow: "3px 3px 0 #1a1008",
+          }}
         >
-          <p className="text-stone-700 text-sm leading-relaxed">
+          <p style={{ fontSize: "0.9rem", color: "#3a2818", lineHeight: 1.7 }}>
             Wil je altijd op de hoogte zijn van nieuwe markten en producten?
             Volg me op Instagram:{" "}
             <a
               href="https://www.instagram.com/curiousmagpie.studio"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-stone-800 hover:underline"
+              style={{ fontWeight: 700, color: "#1a1008" }}
             >
               @curiousmagpie.studio
             </a>
@@ -171,19 +243,33 @@ export default function AgendaPage() {
       {/* Past markets */}
       <section className="max-w-3xl mx-auto px-6 pb-16">
         <h2
-          className="text-xl text-stone-500 mb-6"
-          style={{ fontFamily: "var(--font-serif)" }}
+          style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "1.4rem",
+            color: "#a06e28",
+            marginBottom: "1.25rem",
+          }}
         >
           Eerder aanwezig
         </h2>
-        <div className="space-y-3">
+        <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
           {pastMarkets.map((market, i) => (
             <div
               key={i}
-              className="flex flex-col sm:flex-row sm:items-center sm:justify-between py-3 border-b border-stone-100 text-stone-400"
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                flexWrap: "wrap",
+                gap: "0.25rem",
+                padding: "0.75rem 0",
+                borderBottom: "1.5px dashed #d4c8b0",
+                color: "#a06e28",
+                fontSize: "0.85rem",
+              }}
             >
-              <span className="text-sm">{market.event}</span>
-              <span className="text-xs">{market.date} · {market.location}</span>
+              <span style={{ fontWeight: 600 }}>{market.event}</span>
+              <span style={{ color: "#c8b898" }}>{market.date} · {market.location}</span>
             </div>
           ))}
         </div>
