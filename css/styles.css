@@ -118,6 +118,11 @@ ul {
   z-index: 2;
 }
 
+/* Green wave variant — for transitions from mint/green sections */
+.wave-top-green::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 30 C120 5 240 55 360 30 C480 5 600 50 720 25 C840 0 960 55 1080 35 C1200 15 1320 50 1440 30 L1440 0 L0 0 Z' fill='%23e4ecc8'/%3E%3C/svg%3E");
+}
+
 /* ── Layout helpers ── */
 .container {
   max-width: 64rem; /* 1024px = max-w-5xl */
