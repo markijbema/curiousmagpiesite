@@ -7,7 +7,7 @@
   /* Brand colors */
   --color-primary: #5C8001;      /* Olive green */
   --color-secondary: #2C3D01;    /* Dark olive green */
-  --color-accent-gold: #EDAE49;  /* Warm gold */
+  --color-accent-gold: #FFB30F;  /* Bright yellow */
   --color-accent-brown: #4C2E05; /* Dark brown */
   --color-accent-blue: #00679A;  /* Deep blue */
 
@@ -16,7 +16,7 @@
   --color-sunflower: #5C8001;    /* Olive green = primary */
   --color-sky: #00679A;          /* Deep blue accent */
   --color-grass: #5C8001;        /* Olive green */
-  --color-tangerine: #EDAE49;    /* Warm gold */
+  --color-tangerine: #FFB30F;    /* Bright yellow */
   --color-lilac: #00679A;        /* Deep blue accent */
 
   /* Soft pastels (derived from brand colors) */
@@ -165,7 +165,6 @@ ul {
   top: 0;
   z-index: 50;
   background-color: var(--color-cream);
-  border-bottom: 3px solid var(--color-ink);
 }
 
 .color-stripe {
@@ -195,7 +194,7 @@ ul {
 }
 
 .logo-img {
-  height: 5rem;
+  height: 6.5rem;
   width: auto;
 }
 
