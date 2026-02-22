@@ -488,6 +488,11 @@ ul {
   border-radius: 20px;
 }
 
+.card-img-wrapper {
+  border-bottom: 2.5px solid var(--color-ink);
+  overflow: hidden;
+}
+
 .card-body {
   padding: 1.25rem;
 }
@@ -602,6 +607,349 @@ ul {
 .aspect-4-5 {
   aspect-ratio: 4 / 5;
 }
+
+/* ── Color utilities ── */
+
+/* Text colors */
+.text-ink        { color: var(--color-ink); }
+.text-body       { color: var(--color-ink-soft); }
+.text-green-dark { color: var(--color-secondary); }
+.text-green      { color: var(--color-primary); }
+.text-blue       { color: var(--color-accent-blue); }
+.text-gold-dark  { color: #8a6020; }
+.text-muted      { color: #c0a880; }
+.text-light      { color: var(--color-cream); }
+.text-warm-white { color: var(--color-warm-white); }
+.text-blush      { color: var(--color-blush); }
+
+/* Background colors */
+.bg-cream      { background-color: var(--color-cream); }
+.bg-green      { background-color: var(--color-primary); }
+.bg-green-dark { background-color: var(--color-secondary); }
+.bg-gold       { background-color: var(--color-accent-gold); }
+.bg-blue       { background-color: var(--color-accent-blue); }
+.bg-blush      { background-color: var(--color-blush); }
+.bg-butter     { background-color: var(--color-butter); }
+.bg-mint       { background-color: var(--color-mint); }
+.bg-powder     { background-color: var(--color-powder); }
+.bg-olive      { background-color: #d0dca0; }
+
+/* ── Typography ── */
+
+/* Page titles — accent blue for impact */
+.page-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--color-accent-blue);
+  margin-bottom: 1rem;
+}
+
+.page-title-hero {
+  font-size: clamp(3rem, 8vw, 5rem);
+  line-height: 1.05;
+  color: var(--color-accent-blue);
+  margin-bottom: 1.5rem;
+}
+
+/* Section titles — accent blue */
+.section-title {
+  font-size: 2.5rem;
+  color: var(--color-accent-blue);
+  margin-bottom: 1.25rem;
+  line-height: 1.15;
+}
+
+.section-title-sm {
+  font-size: 1.75rem;
+  color: var(--color-accent-blue);
+  margin-bottom: 2rem;
+}
+
+.section-title-cta {
+  font-size: 2rem;
+  color: var(--color-warm-white);
+  margin-bottom: 0.75rem;
+}
+
+.section-title-cta-lg {
+  font-size: 2.25rem;
+  color: var(--color-warm-white);
+  margin-bottom: 0.75rem;
+}
+
+/* Card titles */
+.card-title {
+  font-size: 1.25rem;
+  color: var(--color-ink);
+  margin-bottom: 0.5rem;
+}
+
+.card-title-sm {
+  font-size: 1.2rem;
+  color: var(--color-ink);
+  margin-bottom: 0.4rem;
+}
+
+.market-title {
+  font-size: 1.3rem;
+  color: var(--color-ink);
+  margin-bottom: 0.2rem;
+}
+
+/* Past events title */
+.section-title-past {
+  font-size: 1.4rem;
+  color: #8a6020;
+  margin-bottom: 1.25rem;
+}
+
+/* Lead / intro text */
+.lead {
+  color: var(--color-ink-soft);
+  max-width: 36rem;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* Body text variants */
+.body-text {
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+  line-height: 1.65;
+}
+
+.body-lg {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-ink-soft);
+  max-width: 28rem;
+  margin-bottom: 2rem;
+}
+
+.body-prose {
+  color: var(--color-ink-soft);
+  line-height: 1.75;
+  font-size: 0.95rem;
+}
+
+.body-sm {
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+  line-height: 1.6;
+}
+
+.body-xs {
+  font-size: 0.8rem;
+  color: #8a6020;
+  margin-top: 0.2rem;
+}
+
+.body-note {
+  font-size: 0.75rem;
+  color: #8a6020;
+  margin-top: 0.25rem;
+  font-style: italic;
+}
+
+.body-cta {
+  color: var(--color-blush);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.body-cta-lg {
+  color: var(--color-blush);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Location line */
+.location-text {
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Link styles */
+.link-bold {
+  font-weight: 700;
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+.link-bold-light {
+  font-weight: 700;
+  color: var(--color-ink);
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+/* Contact card label colors */
+.contact-card-label-green { color: var(--color-secondary); }
+.contact-card-label-gold  { color: var(--color-accent-gold); }
+.contact-card-label-olive { color: var(--color-primary); }
+
+/* Contact card text */
+.contact-name {
+  font-weight: 700;
+  color: var(--color-ink);
+  font-size: 1rem;
+}
+
+.contact-subtitle {
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+}
+
+.contact-note {
+  font-size: 0.8rem;
+  color: var(--color-secondary);
+  margin-top: 0.2rem;
+}
+
+/* Info box text */
+.info-text {
+  font-size: 0.9rem;
+  color: var(--color-ink);
+  line-height: 1.7;
+}
+
+.info-title {
+  font-size: 1.25rem;
+  color: var(--color-ink);
+  margin-bottom: 0.5rem;
+}
+
+/* Instagram note box */
+.instagram-note {
+  margin-top: 2.5rem;
+  background-color: var(--color-blush);
+  border: 2.5px solid var(--color-ink);
+  border-radius: 20px;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  box-shadow: 3px 3px 0 var(--color-ink);
+}
+
+.instagram-note p {
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+  line-height: 1.7;
+}
+
+/* Past market entry */
+.past-market-name {
+  font-weight: 600;
+}
+
+/* Badge color variants */
+.badge-green {
+  background-color: var(--color-primary);
+  color: var(--color-warm-white);
+}
+
+.badge-green-dark {
+  background-color: var(--color-secondary);
+  color: var(--color-warm-white);
+}
+
+.badge-gold {
+  background-color: var(--color-accent-gold);
+  color: var(--color-ink);
+}
+
+/* Badge-sm color variants */
+.badge-sm-green {
+  background-color: var(--color-primary);
+  color: var(--color-warm-white);
+  margin-bottom: 0.5rem;
+}
+
+.badge-sm-green-dark {
+  background-color: var(--color-secondary);
+  color: var(--color-warm-white);
+  margin-bottom: 0.5rem;
+}
+
+.badge-sm-gold {
+  background-color: var(--color-accent-gold);
+  color: var(--color-ink);
+  margin-bottom: 0.5rem;
+}
+
+/* Section label variant */
+.section-label-green {
+  background-color: var(--color-blush);
+  color: var(--color-secondary);
+}
+
+/* Date badge variants */
+.date-badge-green {
+  background-color: var(--color-blush);
+  border: 2px solid var(--color-primary);
+}
+
+.date-badge-gold {
+  background-color: var(--color-butter);
+  border: 2px solid var(--color-accent-gold);
+}
+
+.date-badge-blue {
+  background-color: var(--color-powder);
+  border: 2px solid var(--color-accent-blue);
+}
+
+.date-badge-olive {
+  background-color: #d0dca0;
+  border: 2px solid var(--color-secondary);
+}
+
+/* Time badge variants */
+.time-badge-green-dark { background-color: var(--color-secondary); }
+.time-badge-green      { background-color: var(--color-primary); }
+.time-badge-gold       { background-color: var(--color-accent-gold); }
+.time-badge-blue       { background-color: var(--color-accent-blue); }
+
+/* CTA section */
+.cta-section {
+  background-color: var(--color-secondary);
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+}
+
+.cta-section-lg {
+  background-color: var(--color-secondary);
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+/* Emoji decoration */
+.emoji-decoration {
+  font-size: 2.5rem;
+  transform: rotate(-5deg);
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* Spacing utilities */
+.mb-0  { margin-bottom: 0; }
+.mb-xs { margin-bottom: 0.5rem; }
+.mb-sm { margin-bottom: 0.75rem; }
+.mb-md { margin-bottom: 1rem; }
+.mb-lg { margin-bottom: 1.5rem; }
+.mb-xl { margin-bottom: 2rem; }
+.mb-2xl { margin-bottom: 3.5rem; }
+
+.section-pad { padding: 4rem 1.5rem; }
+.section-pad-bottom { padding: 0 1.5rem 4rem; }
+
+/* Tilt transforms */
+.tilt-left  { transform: rotate(-1deg); }
+.tilt-right { transform: rotate(1deg); }
+.tilt-left-sm  { transform: rotate(-1.5deg); }
 
 /* ── Utility ── */
 .text-center {
