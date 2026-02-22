@@ -8,6 +8,8 @@ The site has been converted from a Next.js app to a plain static HTML/CSS site. 
 
 ## Recently Completed
 
+- [x] Created SVG favicon (`favicon.svg`) from ekster.svg — cropped to bird head + disco ball, text removed
+- [x] Updated all 4 HTML pages to reference `favicon.svg` instead of `favicon.ico`
 - [x] Converted from Next.js to plain static HTML/CSS
 - [x] Created 4 HTML pages (index, producten, agenda, contact)
 - [x] Created shared CSS file (css/styles.css) with all design tokens and utility classes
@@ -49,7 +51,8 @@ The site has been converted from a Next.js app to a plain static HTML/CSS site. 
 | `css/styles.css` | All styles: layout, components, utilities, image classes | ✅ Done |
 | `js/nav.js` | Mobile hamburger menu toggle | ✅ Done |
 | `images/` | SVG stub illustrations (8 files: hero, atelier, 6 products) | ✅ Stub |
-| `favicon.ico` | Site icon | ✅ Done |
+| `favicon.svg` | SVG favicon (bird head + disco ball, cropped from ekster.svg) | ✅ Done |
+| `favicon.ico` | Legacy site icon (no longer referenced from HTML) | ⚠️ Legacy |
 | (no workflow needed) | GitHub Pages serves from `main` branch directly | ✅ Done |
 | `.kilocode/` | AI context & recipes | ✅ Ready |
 
@@ -98,3 +101,4 @@ python3 -m http.server 8000
 | 2026-02-22 | Removed dot background pattern (solid butter bg), added 8 SVG stub illustrations for all products/hero/atelier |
 | 2026-02-22 | Made green the dominant color (customer feedback), made design more playful with rounder shapes (20px/999px border-radius) |
 | 2026-02-22 | Simplified header: removed duplicate name text, enlarged logo, single green stripe, solid section backgrounds |
+| 2026-02-22 | Created SVG favicon from ekster.svg (cropped to head + disco ball, text removed), updated all HTML pages to reference it |
