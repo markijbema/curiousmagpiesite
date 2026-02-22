@@ -1,94 +1,73 @@
-# Active Context: Next.js Starter Template
+# Active Context: Curious Magpie Static Site
 
 ## Current State
 
-**Template Status**: ✅ Ready for development
+**Site Status**: ✅ Static HTML/CSS site ready for GitHub Pages
 
-The template is a clean Next.js 16 starter with TypeScript and Tailwind CSS 4. It's ready for AI-assisted expansion to build any type of application.
+The site has been converted from a Next.js app to a plain static HTML/CSS site. No build step required. Hosted directly on GitHub Pages.
 
 ## Recently Completed
 
-- [x] Base Next.js 16 setup with App Router
-- [x] TypeScript configuration with strict mode
-- [x] Tailwind CSS 4 integration
-- [x] ESLint configuration
-- [x] Memory bank documentation
-- [x] Recipe system for common features
-- [x] Built full Curious Magpie ceramics website (4 pages + components)
+- [x] Converted from Next.js to plain static HTML/CSS
+- [x] Created 4 HTML pages (index, producten, agenda, contact)
+- [x] Created shared CSS file (css/styles.css) with all design tokens and utility classes
+- [x] Created vanilla JS for mobile navigation (js/nav.js)
+- [x] Added GitHub Actions workflow for automatic deployment to GitHub Pages
+- [x] Removed all Next.js dependencies (package.json, tsconfig, next.config, etc.)
+- [x] Google Fonts loaded via CDN (Playfair Display + Lato)
 
 ## Current Structure
 
 | File/Directory | Purpose | Status |
 |----------------|---------|--------|
-| `src/app/page.tsx` | Home page with hero, about, featured products, CTA | ✅ Done |
-| `src/app/layout.tsx` | Root layout with Navigation + Footer | ✅ Done |
-| `src/app/globals.css` | Global styles with sage/clay/stone palette + Playfair/Lato fonts | ✅ Done |
-| `src/app/producten/page.tsx` | Products overview with 6 products + placeholders | ✅ Done |
-| `src/app/agenda/page.tsx` | Markets agenda with upcoming + past dates | ✅ Done |
-| `src/app/contact/page.tsx` | Contact page with email + Instagram | ✅ Done |
-| `src/components/Navigation.tsx` | Sticky nav with mobile hamburger menu | ✅ Done |
-| `src/components/Footer.tsx` | Footer with links + Instagram | ✅ Done |
+| `index.html` | Home page with hero, about, featured products, CTA | ✅ Done |
+| `producten/index.html` | Products overview with 6 products + placeholders | ✅ Done |
+| `agenda/index.html` | Markets agenda with upcoming + past dates | ✅ Done |
+| `contact/index.html` | Contact page with email + Instagram | ✅ Done |
+| `css/styles.css` | All styles: layout, components, utilities | ✅ Done |
+| `js/nav.js` | Mobile hamburger menu toggle | ✅ Done |
+| `favicon.ico` | Site icon | ✅ Done |
+| `.github/workflows/deploy.yml` | GitHub Pages deployment | ✅ Done |
 | `.kilocode/` | AI context & recipes | ✅ Ready |
 
 ## Current Focus
 
-Website is live for Curious Magpie ceramics atelier (Marjolein IJbema).
+Website is a static site for Curious Magpie ceramics atelier (Marjolein IJbema).
+
+### To deploy on GitHub Pages:
+1. Push to `main` branch
+2. Go to GitHub repo Settings → Pages → Source: "GitHub Actions"
+3. The workflow will automatically deploy on every push to main
 
 Pending user actions:
 1. Replace placeholder images with real product photos
 2. Update email address in contact page (currently info@curiousmagpie.nl)
 3. Update market dates in agenda page as needed
+4. Enable GitHub Pages in repo settings (Source: GitHub Actions)
 
 ## Quick Start Guide
 
+### To edit content:
+
+Edit the HTML files directly. No build step needed.
+
+### To preview locally:
+
+Open `index.html` in a browser, or use a simple HTTP server:
+```bash
+python3 -m http.server 8000
+```
+
 ### To add a new page:
 
-Create a file at `src/app/[route]/page.tsx`:
-```tsx
-export default function NewPage() {
-  return <div>New page content</div>;
-}
-```
-
-### To add components:
-
-Create `src/components/` directory and add components:
-```tsx
-// src/components/ui/Button.tsx
-export function Button({ children }: { children: React.ReactNode }) {
-  return <button className="px-4 py-2 bg-blue-600 text-white rounded">{children}</button>;
-}
-```
-
-### To add a database:
-
-Follow `.kilocode/recipes/add-database.md`
-
-### To add API routes:
-
-Create `src/app/api/[route]/route.ts`:
-```tsx
-import { NextResponse } from "next/server";
-
-export async function GET() {
-  return NextResponse.json({ message: "Hello" });
-}
-```
-
-## Available Recipes
-
-| Recipe | File | Use Case |
-|--------|------|----------|
-| Add Database | `.kilocode/recipes/add-database.md` | Data persistence with Drizzle + SQLite |
-
-## Pending Improvements
-
-- [ ] Add more recipes (auth, email, etc.)
-- [ ] Add example components
-- [ ] Add testing setup recipe
+1. Create a directory with an `index.html` file
+2. Copy the header/footer from an existing page
+3. Add navigation links to all pages
 
 ## Session History
 
 | Date | Changes |
 |------|---------|
-| Initial | Template created with base setup |
+| Initial | Template created with base Next.js setup |
+| Previous | Built full Curious Magpie ceramics website (4 pages + components) |
+| 2026-02-22 | Converted from Next.js to plain static HTML/CSS for GitHub Pages hosting |

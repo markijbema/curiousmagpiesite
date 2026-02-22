@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curious Magpie · Keramiek Atelier</title>
+  <meta name="description" content="Handgemaakt keramiek voor buiten, geïnspireerd op de natuur. Atelier van Marjolein IJbema.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header class="site-header">
+    <div class="color-stripe">
+      <div style="background-color:#e8392a"></div>
+      <div style="background-color:#f5c842"></div>
+      <div style="background-color:#5aaa5a"></div>
+      <div style="background-color:#4a9fd4"></div>
+      <div style="background-color:#f07d2a"></div>
+      <div style="background-color:#b87fc4"></div>
+    </div>
+    <div class="container nav-bar">
+      <a href="/" class="logo">
+        <span class="logo-name">Curious Magpie</span>
+        <span class="logo-sub">keramiek atelier</span>
+      </a>
+      <nav class="desktop-nav">
+        <a href="/" class="nav-link active">Home</a>
+        <a href="producten/" class="nav-link">Producten</a>
+        <a href="agenda/" class="nav-link">Agenda</a>
+        <a href="contact/" class="nav-link">Contact</a>
+      </nav>
+      <button class="hamburger" id="menu-toggle" aria-label="Menu openen">
+        <svg id="icon-open" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="icon-close" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="display:none">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="/" class="mobile-nav-link active">Home</a>
+      <a href="producten/" class="mobile-nav-link">Producten</a>
+      <a href="agenda/" class="mobile-nav-link">Agenda</a>
+      <a href="contact/" class="mobile-nav-link">Contact</a>
+    </div>
+  </header>
+
+  <main style="background-color:#fdf8f0">
+
+    <!-- ── HERO ── -->
+    <section class="dot-bg" style="border-bottom:3px solid #1a1008">
+      <div class="container grid-2" style="padding:4rem 1.5rem 4rem">
+        <div>
+          <div class="badge" style="background-color:#f5c842;color:#1a1008;transform:rotate(-1deg);margin-bottom:1.5rem">
+            ✦ Handgemaakt keramiek ✦
+          </div>
+
+          <h1 style="font-size:clamp(3rem,8vw,5rem);line-height:1.05;color:#1a1008;margin-bottom:1.5rem">
+            Curious<br>
+            <span style="color:#e8392a">Magpie</span>
+          </h1>
+
+          <p style="font-size:1.1rem;line-height:1.7;color:#3a2818;max-width:28rem;margin-bottom:2rem">
+            Keramiek voor buiten, geïnspireerd op de natuur. Elk stuk is met
+            de hand gemaakt door Marjolein IJbema in haar atelier.
+          </p>
+
+          <div class="flex-wrap-gap">
+            <a href="producten/" class="btn btn-primary">Bekijk producten →</a>
+            <a href="agenda/" class="btn btn-yellow">Agenda ✦</a>
+          </div>
+        </div>
+
+        <div class="placeholder-box aspect-4-5" style="background-color:#c8dff0;box-shadow:0 10px 25px rgba(0,0,0,0.1)">
+          <span class="placeholder-icon" style="color:#4a9fd4">✿</span>
+          <span class="placeholder-label">Foto volgt</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT ── -->
+    <section class="container" style="padding:5rem 1.5rem">
+      <div class="grid-2">
+        <div class="placeholder-box aspect-square" style="background-color:#c8e8c8;order:2">
+          <span class="placeholder-icon" style="color:#5aaa5a">❧</span>
+          <span class="placeholder-label">Foto volgt</span>
+        </div>
+
+        <div style="order:1">
+          <div class="section-label" style="background-color:#c8e8c8">Over het atelier</div>
+
+          <h2 style="font-size:2.5rem;color:#1a1008;margin-bottom:1.25rem;line-height:1.15">
+            Natuur als<br>
+            <span style="color:#5aaa5a">inspiratie</span>
+          </h2>
+
+          <div class="stack stack-md" style="color:#3a2818;line-height:1.75;font-size:0.95rem">
+            <p>In mijn atelier maak ik keramiek dat zijn thuis vindt in de
+            buitenlucht. Tuinen, terrassen en moestuinen worden mooier met
+            een handgemaakt stukje aardewerk.</p>
+            <p>De natuur is mijn grootste inspiratiebron: de ronde vormen van
+            een slak, de grappige hoed van een paddestoel, de sierlijkheid
+            van een vrouwenfiguur die danst in de wind.</p>
+            <p>Alles wordt met de hand gemaakt en met zorg afgewerkt, zodat
+            het jarenlang buiten kan staan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FEATURED PRODUCTS ── -->
+    <section class="stripe-bg" style="border-top:3px solid #1a1008;border-bottom:3px solid #1a1008;padding:5rem 0">
+      <div class="container">
+        <div class="text-center" style="margin-bottom:3.5rem">
+          <div class="badge" style="background-color:#b87fc4;color:#fdf8f0;margin-bottom:1rem">
+            Uit het atelier
+          </div>
+          <h2 style="font-size:2.5rem;color:#1a1008">Een greep uit de collectie</h2>
+        </div>
+
+        <div class="grid-3">
+          <!-- Product 1 -->
+          <div class="card">
+            <div class="aspect-square" style="background-color:#f9d4cc;border-bottom:2.5px solid #1a1008;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem">
+              <span style="font-size:3rem;color:#e8392a">✿</span>
+              <span style="font-size:0.7rem;color:#6a5040;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">Foto volgt</span>
+            </div>
+            <div class="card-body">
+              <h3 style="font-size:1.2rem;color:#1a1008;margin-bottom:0.4rem">Dansende Vrouwenfiguur</h3>
+              <p style="font-size:0.85rem;color:#5e3e1a;line-height:1.6">Zwiert vrolijk in de wind op een paal in de tuin.</p>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="card">
+            <div class="aspect-square" style="background-color:#c8e8c8;border-bottom:2.5px solid #1a1008;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem">
+              <span style="font-size:3rem;color:#5aaa5a">❧</span>
+              <span style="font-size:0.7rem;color:#6a5040;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">Foto volgt</span>
+            </div>
+            <div class="card-body">
+              <h3 style="font-size:1.2rem;color:#1a1008;margin-bottom:0.4rem">Tuinpaddestoelen</h3>
+              <p style="font-size:0.85rem;color:#5e3e1a;line-height:1.6">Vrolijke paddestoelen voor tussen het groen.</p>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="card">
+            <div class="aspect-square" style="background-color:#fdf0a8;border-bottom:2.5px solid #1a1008;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem">
+              <span style="font-size:3rem;color:#c4881e">✦</span>
+              <span style="font-size:0.7rem;color:#6a5040;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">Foto volgt</span>
+            </div>
+            <div class="card-body">
+              <h3 style="font-size:1.2rem;color:#1a1008;margin-bottom:0.4rem">Groentestekers</h3>
+              <p style="font-size:0.85rem;color:#5e3e1a;line-height:1.6">Handgemaakte stekers voor in de moestuin.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top:3rem">
+          <a href="producten/" class="btn btn-white">Alle producten bekijken →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PHOTO STRIP ── -->
+    <section class="container" style="padding:4rem 1.5rem">
+      <div class="grid-4">
+        <div class="aspect-square" style="background-color:#f9d4cc;border:2.5px solid #1a1008;border-radius:4px 14px 4px 14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem">
+          <span style="font-size:2rem;color:#e8392a">✿</span>
+          <span style="font-size:0.65rem;color:#6a5040;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">Foto volgt</span>
+        </div>
+        <div class="aspect-square" style="background-color:#fdf0a8;border:2.5px solid #1a1008;border-radius:14px 4px 14px 4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem">
+          <span style="font-size:2rem;color:#c4881e">✦</span>
+          <span style="font-size:0.65rem;color:#6a5040;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">Foto volgt</span>
+        </div>
+        <div class="aspect-square" style="background-color:#c8e8c8;border:2.5px solid #1a1008;border-radius:4px 14px 4px 14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem">
+          <span style="font-size:2rem;color:#5aaa5a">❧</span>
+          <span style="font-size:0.65rem;color:#6a5040;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">Foto volgt</span>
+        </div>
+        <div class="aspect-square" style="background-color:#e0d0f0;border:2.5px solid #1a1008;border-radius:14px 4px 14px 4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem">
+          <span style="font-size:2rem;color:#b87fc4">✾</span>
+          <span style="font-size:0.65rem;color:#6a5040;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">Foto volgt</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA BANNER ── -->
+    <section style="background-color:#4a9fd4;border-top:3px solid #1a1008;border-bottom:3px solid #1a1008;padding:4rem 1.5rem;text-align:center">
+      <div class="container-2xs">
+        <div style="font-size:2.5rem;transform:rotate(-5deg);display:inline-block;margin-bottom:1rem">📅</div>
+        <h2 style="font-size:2.25rem;color:#fdf8f0;margin-bottom:0.75rem">Kom me vinden op de markt!</h2>
+        <p style="color:#c8dff0;margin-bottom:1.5rem;font-size:1rem">
+          Regelmatig sta ik op markten in de regio. Bekijk de agenda voor actuele data.
+        </p>
+        <a href="agenda/" class="btn btn-yellow">Bekijk de agenda ✦</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="color-stripe-thin">
+      <div style="background-color:#e8392a"></div>
+      <div style="background-color:#f5c842"></div>
+      <div style="background-color:#5aaa5a"></div>
+      <div style="background-color:#4a9fd4"></div>
+      <div style="background-color:#f07d2a"></div>
+      <div style="background-color:#b87fc4"></div>
+    </div>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>Curious Magpie</h3>
+        <p>Handgemaakt keramiek voor buiten,<br>geïnspireerd op de natuur.<br>Atelier van Marjolein IJbema.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Navigatie</h4>
+        <ul>
+          <li><a href="/">✦ Home</a></li>
+          <li><a href="producten/">✦ Producten</a></li>
+          <li><a href="agenda/">✦ Agenda</a></li>
+          <li><a href="contact/">✦ Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Volg mij</h4>
+        <a href="https://www.instagram.com/curiousmagpie.studio" target="_blank" rel="noopener noreferrer">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"/></svg>
+          @curiousmagpie.studio
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Curious Magpie · Marjolein IJbema
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>
