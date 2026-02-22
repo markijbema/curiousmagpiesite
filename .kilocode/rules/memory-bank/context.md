@@ -8,8 +8,13 @@ The site has been converted from a Next.js app to a plain static HTML/CSS site. 
 
 ## Recently Completed
 
+- [x] **Moved all inline color styles to CSS classes** — no more hardcoded colors in HTML `style` attributes
+- [x] **Headers now use accent blue (#00679A)** — page titles, section titles, card titles all use `--color-accent-blue`
+- [x] **Greens kept for backgrounds** — CTA sections, badges, section backgrounds remain green-dominant
+- [x] Added 50+ utility CSS classes: `.page-title`, `.section-title`, `.body-text`, `.badge-green`, `.bg-blush`, `.text-blue`, etc.
 - [x] Created SVG favicon (`favicon.svg`) from ekster.svg — cropped to bird head + disco ball, text removed
 - [x] Updated all 4 HTML pages to reference `favicon.svg` instead of `favicon.ico`
+- [x] Removed `favicon.ico` (no longer needed)
 - [x] Converted from Next.js to plain static HTML/CSS
 - [x] Created 4 HTML pages (index, producten, agenda, contact)
 - [x] Created shared CSS file (css/styles.css) with all design tokens and utility classes
@@ -52,7 +57,6 @@ The site has been converted from a Next.js app to a plain static HTML/CSS site. 
 | `js/nav.js` | Mobile hamburger menu toggle | ✅ Done |
 | `images/` | SVG stub illustrations (8 files: hero, atelier, 6 products) | ✅ Stub |
 | `favicon.svg` | SVG favicon (bird head + disco ball, cropped from ekster.svg) | ✅ Done |
-| `favicon.ico` | Legacy site icon (no longer referenced from HTML) | ⚠️ Legacy |
 | (no workflow needed) | GitHub Pages serves from `main` branch directly | ✅ Done |
 | `.kilocode/` | AI context & recipes | ✅ Ready |
 
@@ -102,3 +106,4 @@ python3 -m http.server 8000
 | 2026-02-22 | Made green the dominant color (customer feedback), made design more playful with rounder shapes (20px/999px border-radius) |
 | 2026-02-22 | Simplified header: removed duplicate name text, enlarged logo, single green stripe, solid section backgrounds |
 | 2026-02-22 | Created SVG favicon from ekster.svg (cropped to head + disco ball, text removed), updated all HTML pages to reference it |
+| 2026-02-22 | Moved all inline color styles to CSS classes; headers now use accent blue (#00679A); greens kept for backgrounds |
