@@ -12,7 +12,7 @@ The site has been converted from a Next.js app to a plain static HTML/CSS site. 
 - [x] Created 4 HTML pages (index, producten, agenda, contact)
 - [x] Created shared CSS file (css/styles.css) with all design tokens and utility classes
 - [x] Created vanilla JS for mobile navigation (js/nav.js)
-- [x] Added GitHub Actions workflow for automatic deployment to GitHub Pages
+- [x] GitHub Pages serves directly from `main` branch (no build step, no Actions workflow)
 - [x] Removed all Next.js dependencies (package.json, tsconfig, next.config, etc.)
 - [x] Google Fonts loaded via CDN (Playfair Display + Lato)
 
@@ -27,7 +27,7 @@ The site has been converted from a Next.js app to a plain static HTML/CSS site. 
 | `css/styles.css` | All styles: layout, components, utilities | ✅ Done |
 | `js/nav.js` | Mobile hamburger menu toggle | ✅ Done |
 | `favicon.ico` | Site icon | ✅ Done |
-| `.github/workflows/deploy.yml` | GitHub Pages deployment | ✅ Done |
+| (no workflow needed) | GitHub Pages serves from `main` branch directly | ✅ Done |
 | `.kilocode/` | AI context & recipes | ✅ Ready |
 
 ## Current Focus
@@ -36,14 +36,14 @@ Website is a static site for Curious Magpie ceramics atelier (Marjolein IJbema).
 
 ### To deploy on GitHub Pages:
 1. Push to `main` branch
-2. Go to GitHub repo Settings → Pages → Source: "GitHub Actions"
-3. The workflow will automatically deploy on every push to main
+2. Go to GitHub repo Settings → Pages → Source: "Deploy from a branch" → Branch: `main` / `/ (root)`
+3. Save — the site will be live within a minute
 
 Pending user actions:
 1. Replace placeholder images with real product photos
 2. Update email address in contact page (currently info@curiousmagpie.nl)
 3. Update market dates in agenda page as needed
-4. Enable GitHub Pages in repo settings (Source: GitHub Actions)
+4. Enable GitHub Pages in repo settings (Source: "Deploy from a branch" → Branch: `main` / `/ (root)`)
 
 ## Quick Start Guide
 
