@@ -1,143 +1,114 @@
-# Technical Context: Next.js Starter Template
+# Technical Context: Curious Magpie Static Site
 
 ## Technology Stack
 
-| Technology   | Version | Purpose                         |
-| ------------ | ------- | ------------------------------- |
-| Next.js      | 16.x    | React framework with App Router |
-| React        | 19.x    | UI library                      |
-| TypeScript   | 5.9.x   | Type-safe JavaScript            |
-| Tailwind CSS | 4.x     | Utility-first CSS               |
-| Bun          | Latest  | Package manager & runtime       |
+| Technology      | Purpose                              |
+| --------------- | ------------------------------------ |
+| HTML5           | Page structure                       |
+| CSS3            | Styling (custom properties, flexbox, grid) |
+| Vanilla JS      | Mobile menu toggle only              |
+| Google Fonts    | Playfair Display + Lato via CDN      |
+| GitHub Pages    | Static hosting from `main` branch    |
 
 ## Development Environment
 
 ### Prerequisites
 
-- Bun installed (`curl -fsSL https://bun.sh/install | bash`)
-- Node.js 20+ (for compatibility)
+- Any text editor
+- A web browser for previewing
+- Git for version control
 
 ### Commands
 
 ```bash
-bun install        # Install dependencies
-bun dev            # Start dev server (http://localhost:3000)
-bun build          # Production build
-bun start          # Start production server
-bun lint           # Run ESLint
-bun typecheck      # Run TypeScript type checking
+# Preview locally
+python3 -m http.server 8000
+# or just open index.html in a browser
+
+# Deploy
+git add -A && git commit -m "message" && git push
 ```
 
-## Project Configuration
-
-### Next.js Config (`next.config.ts`)
-
-- App Router enabled
-- Default settings for flexibility
-
-### TypeScript Config (`tsconfig.json`)
-
-- Strict mode enabled
-- Path alias: `@/*` → `src/*`
-- Target: ESNext
-
-### Tailwind CSS 4 (`postcss.config.mjs`)
-
-- Uses `@tailwindcss/postcss` plugin
-- CSS-first configuration (v4 style)
-
-### ESLint (`eslint.config.mjs`)
-
-- Uses `eslint-config-next`
-- Flat config format
-
-## Key Dependencies
-
-### Production Dependencies
-
-```json
-{
-  "next": "^16.1.3", // Framework
-  "react": "^19.2.3", // UI library
-  "react-dom": "^19.2.3" // React DOM
-}
-```
-
-### Dev Dependencies
-
-```json
-{
-  "typescript": "^5.9.3",
-  "@types/node": "^24.10.2",
-  "@types/react": "^19.2.7",
-  "@types/react-dom": "^19.2.3",
-  "@tailwindcss/postcss": "^4.1.17",
-  "tailwindcss": "^4.1.17",
-  "eslint": "^9.39.1",
-  "eslint-config-next": "^16.0.0"
-}
-```
-
-## File Structure
+## Project Structure
 
 ```
 /
+├── index.html              # Home page
+├── producten/index.html    # Products page
+├── agenda/index.html       # Markets agenda page
+├── contact/index.html      # Contact page
+├── css/styles.css          # All styles (single file)
+├── js/nav.js               # Mobile hamburger menu toggle
+├── images/                 # SVG stub illustrations (8 files)
+│   ├── hero.svg
+│   ├── atelier.svg
+│   ├── product-vrouwenfiguur.svg
+│   ├── product-slakjes.svg
+│   ├── product-kaartjeshouder.svg
+│   ├── product-paddestoelen.svg
+│   ├── product-groentestekers.svg
+│   └── product-bloemetjeskaartjes.svg
+├── ekster.svg              # Full logo (magpie + disco ball + text)
+├── favicon.svg             # Cropped favicon (head + disco ball)
 ├── .gitignore              # Git ignore rules
-├── package.json            # Dependencies and scripts
-├── bun.lock                # Bun lockfile
-├── next.config.ts          # Next.js configuration
-├── tsconfig.json           # TypeScript configuration
-├── postcss.config.mjs      # PostCSS (Tailwind) config
-├── eslint.config.mjs       # ESLint configuration
-├── public/                 # Static assets
-│   └── .gitkeep
-└── src/                    # Source code
-    └── app/                # Next.js App Router
-        ├── layout.tsx      # Root layout
-        ├── page.tsx        # Home page
-        ├── globals.css     # Global styles
-        └── favicon.ico     # Site icon
+├── AGENTS.md               # AI agent instructions
+├── README.md               # Project readme
+└── .kilocode/              # AI context & recipes
+```
+
+## CSS Architecture
+
+Single file `css/styles.css` organized as:
+
+1. **Custom Properties** — brand colors, fonts, semantic aliases
+2. **Base styles** — reset, body, headings, links
+3. **Layout helpers** — containers, grids, stacks
+4. **Navigation** — header, nav links, hamburger, mobile menu
+5. **Footer** — footer grid, brand, nav, social
+6. **Buttons** — `.btn`, `.btn-primary`, `.btn-yellow`, etc.
+7. **Badges** — `.badge`, `.badge-sm`, color variants
+8. **Cards** — `.card`, `.card-body`, `.card-img-wrapper`
+9. **Market cards** — `.market-card`, `.date-badge`, `.time-badge`
+10. **Contact cards** — `.contact-card`, `.info-box`
+11. **Color utilities** — `.text-blue`, `.bg-blush`, `.bg-mint`, etc.
+12. **Typography classes** — `.page-title`, `.section-title`, `.body-text`, `.lead`
+13. **Spacing utilities** — `.mb-md`, `.mb-lg`, `.section-pad`
+
+## Key Design Tokens
+
+```css
+--color-primary: #5C8001;       /* Olive green */
+--color-secondary: #2C3D01;     /* Dark olive */
+--color-accent-blue: #00679A;   /* Deep blue — headers */
+--color-accent-gold: #FFB30F;   /* Bright yellow */
+--color-ink: #4C2E05;           /* Dark brown — body text */
+--color-ink-soft: #6B4A1A;      /* Lighter brown */
+--color-cream: #f7f5ee;         /* Page background */
+--color-blush: #d8e4a8;         /* Light olive */
+--color-mint: #e4ecc8;          /* Lighter olive */
+--color-butter: #faecc0;        /* Light gold */
+--color-powder: #c0e0f0;        /* Light blue */
 ```
 
 ## Technical Constraints
 
-### Starting Point
-
-- Minimal structure - expand as needed
-- No database by default (use recipe to add)
-- No authentication by default (add when needed)
-
-### Browser Support
-
-- Modern browsers (ES2020+)
-- No IE11 support
-
-## Performance Considerations
-
-### Image Optimization
-
-- Use Next.js `Image` component for optimization
-- Place images in `public/` directory
-
-### Bundle Size
-
-- Tree-shaking enabled by default
-- Tailwind CSS purges unused styles
-
-### Core Web Vitals
-
-- Server Components reduce client JavaScript
-- Streaming and Suspense for better UX
+- **No build step** — files served as-is
+- **No JavaScript framework** — vanilla JS only (for hamburger menu)
+- **No package manager** — no npm, no bun, no dependencies
+- **No server-side logic** — pure static files
+- **Modern browsers only** — uses CSS custom properties, grid, flexbox
 
 ## Deployment
 
-### Build Output
+- **Host**: GitHub Pages
+- **Source**: `main` branch, root directory
+- **URL**: Set in GitHub repo Settings → Pages
+- **Deploy**: Push to `main` — GitHub Pages auto-deploys
 
-- Server-rendered pages by default
-- Can be configured for static export
+## Performance
 
-### Environment Variables
-
-- None required for base template
-- Add as needed for features
-- Use `.env.local` for local development
+- No JavaScript bundles to load
+- Single CSS file (~1000 lines)
+- SVG illustrations (small file sizes)
+- Google Fonts loaded via CDN with `preconnect`
+- No images to optimize yet (using SVG stubs)

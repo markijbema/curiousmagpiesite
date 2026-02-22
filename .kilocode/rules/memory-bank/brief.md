@@ -1,48 +1,51 @@
-# Project Brief: Next.js Starter Template
+# Project Brief: Curious Magpie — Keramiek Atelier Website
 
 ## Purpose
 
-This is a minimal Next.js starter template designed for AI-assisted development. It provides a clean foundation that can be extended to build any type of web application through interaction with an AI assistant.
+A static website for **Curious Magpie**, the ceramics atelier of Marjolein IJbema. The site showcases handmade outdoor ceramics, lists upcoming market dates, and provides contact information.
 
 ## Target Users
 
-- Developers wanting a clean Next.js starting point
-- Users building applications through AI-assisted coding
-- Teams needing a standardized, modern Next.js setup
+- Potential customers interested in handmade ceramics
+- Market visitors looking for upcoming dates and locations
+- People wanting to contact Marjolein for custom orders
 
 ## Core Use Case
 
-Users describe what they want to build to an AI assistant, which then expands this template by:
-
-1. Adding components and pages as needed
-2. Installing additional dependencies
-3. Setting up databases, authentication, etc. using recipes
-4. Customizing styling and branding
+Visitors browse the site to:
+1. See the range of handmade ceramic products
+2. Find out when and where Curious Magpie will be at markets
+3. Contact Marjolein via email or Instagram
 
 ## Key Requirements
 
 ### Must Have
 
-- Modern Next.js 16 setup with App Router
-- TypeScript for type safety
-- Tailwind CSS 4 for styling
-- ESLint for code quality
-- Clean, minimal starting structure
-- Bun as package manager
+- Clean, playful design reflecting the handmade nature of the products
+- Product overview with images and descriptions
+- Market agenda with upcoming dates
+- Contact page with email and Instagram
+- Mobile-responsive layout
+- Fast loading (no build step, static files only)
 
 ### Nice to Have
 
-- Recipe system for common additions (database, auth)
-- Memory bank for AI context persistence
-- Clear development guidelines
+- SVG illustrations as placeholders until real photos are available
+- Favicon based on the magpie logo
+- Easy to update market dates and products
 
-## Success Metrics
+## Brand Identity
 
-- Clean, zero-error TypeScript setup
-- Passing lint and type checks
+- **Name**: Curious Magpie (keramiek atelier)
+- **Owner**: Marjolein IJbema
+- **Logo**: Magpie bird holding a disco ball (`ekster.svg`)
+- **Colors**: Green-dominant palette with blue accents and gold highlights
+- **Fonts**: Playfair Display (headings) + Lato (body)
+- **Tone**: Warm, playful, nature-inspired
 
 ## Constraints
 
-- Minimal dependencies by default
-- Framework: Next.js 16 + React 19 + Tailwind CSS 4
-- Package manager: Bun
+- No build step — plain HTML, CSS, vanilla JS
+- Hosted on GitHub Pages (static files from `main` branch)
+- No database, no server-side logic
+- Dutch language content

@@ -2,37 +2,34 @@
 
 ## Critical Rules
 
-- **Package manager**: Use `bun` (not npm/yarn)
-- **Never run** `next dev` or `bun dev` - the sandbox handles this automatically
+- **No build step** — this is a plain static HTML/CSS/JS site
+- **No package manager** — no npm, bun, or yarn needed
 - **Always commit and push** after completing changes:
   ```bash
-  bun typecheck && bun lint && git add -A && git commit -m "descriptive message" && git push
+  git add -A && git commit -m "descriptive message" && git push
   ```
 
 ## Commands
 
 | Command | Purpose |
 |---------|---------|
-| `bun install` | Install dependencies |
-| `bun build` | Build production app |
-| `bun lint` | Check code quality |
-| `bun typecheck` | Type checking |
+| `python3 -m http.server 8000` | Preview locally at http://localhost:8000 |
+| `git add -A && git commit -m "msg" && git push` | Deploy to GitHub Pages |
 
 ## Best Practices
 
-### React/Next.js
-- Use Server Components by default; add `"use client"` only when needed
-- Use `next/image` for optimized images
-- Use `next/link` for client-side navigation
-- Use `error.tsx` for error boundaries
-- Use `not-found.tsx` for 404 pages
+### HTML
+- Use semantic HTML elements (`<header>`, `<main>`, `<section>`, `<article>`, `<footer>`)
+- Use CSS classes instead of inline styles for colors and layout
+- Keep all pages consistent with the same header/footer structure
 
-### API Routes
-- Return `NextResponse.json({ error: "..." }, { status: 500 })` on failure
-- Always include appropriate status codes
-- Handle errors gracefully
+### CSS
+- All styles in a single file: `css/styles.css`
+- Use CSS custom properties (variables) for brand colors
+- Use utility classes for common patterns (`.text-blue`, `.bg-blush`, `.mb-lg`)
+- Use component classes for complex elements (`.card`, `.badge`, `.market-card`)
 
-### Code Quality
-- Run `bun typecheck` before committing
-- Run `bun lint` before committing
+### Content
+- All content is in Dutch (Nederlands)
 - Write descriptive commit messages
+- Update memory bank after significant changes

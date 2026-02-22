@@ -1,120 +1,103 @@
-# System Patterns: Next.js Starter Template
+# System Patterns: Curious Magpie Static Site
 
 ## Architecture Overview
 
 ```
-src/
-├── app/                    # Next.js App Router
-│   ├── layout.tsx          # Root layout + metadata
-│   ├── page.tsx            # Home page
-│   ├── globals.css         # Tailwind imports + global styles
-│   └── favicon.ico         # Site icon
-└── (expand as needed)
-    ├── components/         # React components (add when needed)
-    ├── lib/                # Utilities and helpers (add when needed)
-    └── db/                 # Database files (add via recipe)
+/
+├── index.html              # Home page
+├── producten/index.html    # Products page
+├── agenda/index.html       # Markets agenda page
+├── contact/index.html      # Contact page
+├── css/styles.css          # All styles (design tokens, components, utilities)
+├── js/nav.js               # Mobile hamburger menu toggle
+├── images/                 # SVG stub illustrations (8 files)
+├── ekster.svg              # Full logo (magpie with disco ball + text)
+├── favicon.svg             # Cropped favicon (head + disco ball only)
+├── .gitignore              # Git ignore rules
+├── AGENTS.md               # AI agent instructions
+├── README.md               # Project readme
+└── .kilocode/              # AI context & recipes
 ```
 
 ## Key Design Patterns
 
-### 1. App Router Pattern
+### 1. Directory-Based Routing (Static)
 
-Uses Next.js App Router with file-based routing:
+Each page is an `index.html` inside its own directory for clean URLs:
 ```
-src/app/
-├── page.tsx           # Route: /
-├── about/page.tsx     # Route: /about
-├── blog/
-│   ├── page.tsx       # Route: /blog
-│   └── [slug]/page.tsx # Route: /blog/:slug
-└── api/
-    └── route.ts       # API Route: /api
+/                    → index.html
+/producten/          → producten/index.html
+/agenda/             → agenda/index.html
+/contact/            → contact/index.html
 ```
 
-### 2. Component Organization Pattern (When Expanding)
+### 2. Shared Header/Footer Pattern
 
-```
-src/components/
-├── ui/                # Reusable UI components (Button, Card, etc.)
-├── layout/            # Layout components (Header, Footer)
-├── sections/          # Page sections (Hero, Features, etc.)
-└── forms/             # Form components
-```
+Every page includes the same header and footer HTML. When adding a new page, copy from an existing page and update the active nav link.
 
-### 3. Server Components by Default
+### 3. CSS-Only Design System
 
-All components are Server Components unless marked with `"use client"`:
-```tsx
-// Server Component (default) - can fetch data, access DB
-export default function Page() {
-  return <div>Server rendered</div>;
-}
+All styling is in a single `css/styles.css` file with:
+- **Custom properties** (CSS variables) for brand colors, fonts
+- **Component classes** (`.card`, `.badge`, `.btn`, `.market-card`, etc.)
+- **Utility classes** (`.text-blue`, `.bg-blush`, `.mb-lg`, `.section-pad`, etc.)
+- **Typography classes** (`.page-title`, `.section-title`, `.body-text`, `.lead`, etc.)
 
-// Client Component - for interactivity
-"use client";
-export default function Counter() {
-  const [count, setCount] = useState(0);
-  return <button onClick={() => setCount(c => c + 1)}>{count}</button>;
-}
-```
+### 4. No Build Step
 
-### 4. Layout Pattern
-
-Layouts wrap pages and can be nested:
-```tsx
-// src/app/layout.tsx - Root layout
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
-}
-
-// src/app/dashboard/layout.tsx - Nested layout
-export default function DashboardLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="flex">
-      <Sidebar />
-      <main>{children}</main>
-    </div>
-  );
-}
-```
+- Plain HTML, CSS, and vanilla JS
+- Google Fonts loaded via CDN
+- No bundler, no transpiler, no framework
+- GitHub Pages serves files directly from `main` branch
 
 ## Styling Conventions
 
-### Tailwind CSS Usage
-- Utility classes directly on elements
-- Component composition for repeated patterns
-- Responsive: `sm:`, `md:`, `lg:`, `xl:`
+### CSS Custom Properties
+```css
+--color-primary: #5C8001;       /* Olive green */
+--color-secondary: #2C3D01;     /* Dark olive */
+--color-accent-blue: #00679A;   /* Deep blue — used for headers */
+--color-accent-gold: #FFB30F;   /* Bright yellow */
+--color-ink: #4C2E05;           /* Dark brown — body text */
+```
+
+### Color Strategy
+- **Headers/titles**: Accent blue (`--color-accent-blue`, #00679A)
+- **Backgrounds**: Greens (`--color-primary`, `--color-blush`, `--color-mint`)
+- **CTA sections**: Dark green (`--color-secondary`)
+- **Body text**: Brown ink (`--color-ink`, `--color-ink-soft`)
+- **Badges**: Green or gold variants
 
 ### Common Patterns
-```tsx
-// Container
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+```html
+<!-- Page title -->
+<h1 class="page-title">Producten</h1>
 
-// Responsive grid
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Section title -->
+<h2 class="section-title">Natuur als inspiratie</h2>
 
-// Flexbox centering
-<div className="flex items-center justify-center">
+<!-- Badge -->
+<div class="badge badge-green tilt-left mb-md">✦ Handgemaakt keramiek ✦</div>
+
+<!-- Card -->
+<div class="card">
+  <div class="card-img-wrapper aspect-square">...</div>
+  <div class="card-body">
+    <h3 class="card-title">Product Name</h3>
+    <p class="body-text">Description</p>
+  </div>
+</div>
 ```
 
 ## File Naming Conventions
 
-- Components: PascalCase (`Button.tsx`, `Header.tsx`)
-- Utilities: camelCase (`utils.ts`, `helpers.ts`)
-- Pages/Routes: lowercase (`page.tsx`, `layout.tsx`)
-- Directories: kebab-case (`api-routes/`) or lowercase (`components/`)
+- HTML pages: `index.html` inside named directories
+- CSS: single file `css/styles.css`
+- JS: single file `js/nav.js`
+- Images: descriptive kebab-case (`product-slakjes.svg`, `hero.svg`)
+- SVG assets: descriptive names (`ekster.svg`, `favicon.svg`)
 
-## State Management
+## Fonts
 
-For simple needs:
-- `useState` for local component state
-- `useContext` for shared state
-- Server Components for data fetching
-
-For complex needs (add when necessary):
-- Zustand for client state
-- React Query for server state
+- **Display**: Playfair Display (headings) — loaded via Google Fonts CDN
+- **Body**: Lato (body text) — loaded via Google Fonts CDN
