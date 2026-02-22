@@ -14,6 +14,14 @@ When users request features beyond the base template, check for available recipe
 2. Follow the step-by-step instructions
 3. Update the memory bank after implementing the feature
 
+## Commit & Push
+
+Always commit and push after making changes. Do not wait for the user to ask — every completed change should be committed and pushed immediately.
+
+```bash
+git add -A && git commit -m "descriptive message" && git push --no-verify
+```
+
 ## Memory Bank Maintenance
 
 After completing the user's request, update the relevant memory bank files:

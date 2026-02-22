@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#b3d8ea"/>
+      <stop offset="100%" style="stop-color:#c0e0f0"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <!-- Garden background -->
+  <ellipse cx="100" cy="350" rx="80" ry="60" fill="#c4deb0" opacity="0.5"/>
+  <ellipse cx="320" cy="340" rx="100" ry="70" fill="#d4eeb8" opacity="0.5"/>
+  <!-- Ground -->
+  <ellipse cx="200" cy="370" rx="50" ry="15" fill="rgba(0,0,0,0.08)"/>
+  <!-- Pole -->
+  <rect x="196" y="180" width="8" height="190" fill="#8B7355" rx="3"/>
+  <!-- Dancing woman figure -->
+  <circle cx="200" cy="135" r="18" fill="#00679A"/>
+  <!-- Body/dress flowing -->
+  <path d="M182 148 Q175 175 168 195 Q185 185 200 190 Q215 185 232 195 Q225 175 218 148 Z" fill="#207FA6"/>
+  <!-- Arms flowing in wind -->
+  <path d="M182 155 Q160 140 148 145 Q150 150 155 152" fill="#207FA6"/>
+  <path d="M218 155 Q240 140 252 145 Q250 150 245 152" fill="#207FA6"/>
+  <!-- Skirt flowing -->
+  <path d="M168 195 Q160 215 155 220 Q175 210 200 215 Q225 210 245 220 Q240 215 232 195 Q215 208 200 210 Q185 208 168 195" fill="#00679A" opacity="0.7"/>
+  <!-- Face details -->
+  <circle cx="193" cy="132" r="2" fill="#fdf8f0"/>
+  <circle cx="207" cy="132" r="2" fill="#fdf8f0"/>
+  <path d="M195 140 Q200 144 205 140" stroke="#fdf8f0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Wind lines -->
+  <path d="M250 160 Q270 155 280 158" stroke="#207FA6" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+  <path d="M255 170 Q275 165 290 168" stroke="#207FA6" stroke-width="1.5" fill="none" opacity="0.3" stroke-linecap="round"/>
+  <path d="M120 155 Q100 150 90 153" stroke="#207FA6" stroke-width="1.5" fill="none" opacity="0.3" stroke-linecap="round"/>
+  <!-- Small flowers at base -->
+  <circle cx="160" cy="355" r="4" fill="#FFB30F" opacity="0.6"/>
+  <circle cx="175" cy="360" r="3" fill="#6DB52D" opacity="0.6"/>
+  <circle cx="230" cy="358" r="4" fill="#FFB30F" opacity="0.6"/>
+  <circle cx="245" cy="355" r="3" fill="#00679A" opacity="0.4"/>
+  <!-- Watermark -->
+  <text x="200" y="390" font-family="sans-serif" font-size="9" fill="rgba(90,60,30,0.35)" text-anchor="middle" letter-spacing="0.15em">VOORBEELDFOTO</text>
+</svg>

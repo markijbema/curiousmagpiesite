@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4eeb8"/>
+      <stop offset="100%" style="stop-color:#c4deb0"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <!-- Ground with plants -->
+  <ellipse cx="200" cy="350" rx="180" ry="50" fill="#b8d898" opacity="0.5"/>
+  <!-- Small grass tufts -->
+  <path d="M80 340 Q85 310 90 340" stroke="#6DB52D" stroke-width="2" fill="none"/>
+  <path d="M85 342 Q92 315 98 342" stroke="#2C6C13" stroke-width="2" fill="none"/>
+  <path d="M310 335 Q315 305 320 335" stroke="#6DB52D" stroke-width="2" fill="none"/>
+  <path d="M315 337 Q322 310 328 337" stroke="#2C6C13" stroke-width="2" fill="none"/>
+  <!-- Big mushroom (center) -->
+  <ellipse cx="200" cy="340" rx="18" ry="5" fill="rgba(0,0,0,0.08)"/>
+  <rect x="192" y="260" width="16" height="80" fill="#e8dcc8" rx="6"/>
+  <ellipse cx="200" cy="260" rx="45" ry="30" fill="#00679A"/>
+  <ellipse cx="200" cy="255" rx="42" ry="26" fill="#207FA6"/>
+  <!-- Spots -->
+  <circle cx="185" cy="250" r="5" fill="#fdf8f0" opacity="0.6"/>
+  <circle cx="210" cy="245" r="4" fill="#fdf8f0" opacity="0.6"/>
+  <circle cx="195" cy="265" r="3" fill="#fdf8f0" opacity="0.5"/>
+  <circle cx="218" cy="258" r="4" fill="#fdf8f0" opacity="0.5"/>
+  <!-- Medium mushroom (left) -->
+  <ellipse cx="120" cy="348" rx="12" ry="4" fill="rgba(0,0,0,0.06)"/>
+  <rect x="114" y="290" width="12" height="58" fill="#e8dcc8" rx="5"/>
+  <ellipse cx="120" cy="290" rx="32" ry="22" fill="#6DB52D"/>
+  <ellipse cx="120" cy="286" rx="29" ry="19" fill="#7DC53D"/>
+  <circle cx="108" cy="283" r="3.5" fill="#fdf8f0" opacity="0.5"/>
+  <circle cx="128" cy="280" r="3" fill="#fdf8f0" opacity="0.5"/>
+  <circle cx="118" cy="295" r="2.5" fill="#fdf8f0" opacity="0.4"/>
+  <!-- Small mushroom (right) -->
+  <ellipse cx="280" cy="352" rx="10" ry="3" fill="rgba(0,0,0,0.06)"/>
+  <rect x="275" y="315" width="10" height="37" fill="#e8dcc8" rx="4"/>
+  <ellipse cx="280" cy="315" rx="22" ry="15" fill="#FFB30F"/>
+  <ellipse cx="280" cy="312" rx="20" ry="13" fill="#FFC030"/>
+  <circle cx="272" cy="310" r="2.5" fill="#fdf8f0" opacity="0.5"/>
+  <circle cx="286" cy="308" r="2" fill="#fdf8f0" opacity="0.5"/>
+  <!-- Tiny mushroom baby -->
+  <rect x="248" y="340" width="6" height="16" fill="#e8dcc8" rx="2"/>
+  <ellipse cx="251" cy="340" rx="10" ry="7" fill="#2C6C13"/>
+  <circle cx="248" cy="338" r="1.5" fill="#fdf8f0" opacity="0.5"/>
+  <!-- Little leaf -->
+  <path d="M150 350 Q160 335 170 345" fill="#6DB52D" opacity="0.4"/>
+  <path d="M230 348 Q240 333 250 343" fill="#2C6C13" opacity="0.3"/>
+  <!-- Watermark -->
+  <text x="200" y="390" font-family="sans-serif" font-size="9" fill="rgba(90,60,30,0.35)" text-anchor="middle" letter-spacing="0.15em">VOORBEELDFOTO</text>
+</svg>

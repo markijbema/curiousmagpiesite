@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c0e0f0"/>
+      <stop offset="100%" style="stop-color:#b3d8ea"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#bg)" rx="12"/>
+  <!-- Table surface -->
+  <rect x="0" y="340" width="400" height="160" fill="#c8a882" rx="0"/>
+  <rect x="0" y="335" width="400" height="12" fill="#b89872" rx="0"/>
+  <!-- Dancing woman figurine -->
+  <ellipse cx="200" cy="310" rx="20" ry="5" fill="rgba(0,0,0,0.1)"/>
+  <rect x="196" y="220" width="8" height="90" fill="#8B7355" rx="2"/>
+  <circle cx="200" cy="200" r="12" fill="#00679A"/>
+  <ellipse cx="200" cy="215" rx="15" ry="20" fill="#207FA6"/>
+  <path d="M185 210 Q170 200 175 185" stroke="#207FA6" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M215 210 Q230 200 225 185" stroke="#207FA6" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Mushroom 1 -->
+  <ellipse cx="100" cy="315" rx="12" ry="3" fill="rgba(0,0,0,0.1)"/>
+  <rect x="96" y="290" width="8" height="25" fill="#e8dcc8" rx="3"/>
+  <ellipse cx="100" cy="290" rx="18" ry="12" fill="#6DB52D"/>
+  <circle cx="93" cy="286" r="2" fill="#fff" opacity="0.5"/>
+  <circle cx="106" cy="288" r="1.5" fill="#fff" opacity="0.5"/>
+  <!-- Mushroom 2 -->
+  <ellipse cx="130" cy="320" rx="8" ry="2" fill="rgba(0,0,0,0.1)"/>
+  <rect x="127" y="302" width="6" height="18" fill="#e8dcc8" rx="2"/>
+  <ellipse cx="130" cy="302" rx="13" ry="9" fill="#2C6C13"/>
+  <circle cx="125" cy="299" r="1.5" fill="#fff" opacity="0.5"/>
+  <!-- Snail -->
+  <ellipse cx="300" cy="318" rx="10" ry="3" fill="rgba(0,0,0,0.1)"/>
+  <ellipse cx="300" cy="312" rx="16" ry="12" fill="#FFB30F"/>
+  <path d="M300 300 Q300 294 296 294 Q292 294 292 300 Q292 306 300 306" stroke="#c8900a" stroke-width="1.5" fill="none"/>
+  <ellipse cx="312" cy="308" rx="8" ry="5" fill="#e8c870"/>
+  <circle cx="316" cy="304" r="1.5" fill="#1a1008"/>
+  <line x1="314" y1="301" x2="316" y2="296" stroke="#1a1008" stroke-width="1"/>
+  <line x1="318" y1="302" x2="320" y2="297" stroke="#1a1008" stroke-width="1"/>
+  <!-- Vegetable markers -->
+  <rect x="330" y="260" width="4" height="60" fill="#8B7355" rx="1"/>
+  <rect x="325" y="250" width="14" height="16" fill="#6DB52D" rx="3"/>
+  <text x="332" y="262" font-size="8" fill="#fff" text-anchor="middle" font-family="sans-serif">🥕</text>
+  <rect x="350" y="270" width="4" height="50" fill="#8B7355" rx="1"/>
+  <rect x="345" y="260" width="14" height="16" fill="#00679A" rx="3"/>
+  <text x="352" y="272" font-size="8" fill="#fff" text-anchor="middle" font-family="sans-serif">🌿</text>
+  <!-- Watermark text -->
+  <text x="200" y="430" font-family="Georgia, serif" font-size="18" fill="rgba(90,60,30,0.4)" text-anchor="middle" font-style="italic">Voorbeeldfoto</text>
+  <text x="200" y="455" font-family="sans-serif" font-size="11" fill="rgba(90,60,30,0.3)" text-anchor="middle" letter-spacing="0.15em">WORDT VERVANGEN</text>
+</svg>

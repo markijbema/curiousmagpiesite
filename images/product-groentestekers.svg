@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff0c0"/>
+      <stop offset="100%" style="stop-color:#ffe8a0"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <!-- Soil / earth -->
+  <rect x="0" y="300" width="400" height="100" fill="#c8a882" rx="0"/>
+  <rect x="0" y="295" width="400" height="10" fill="#b89872" rx="3"/>
+  <!-- Small plants growing -->
+  <path d="M80 295 Q85 275 90 295" stroke="#6DB52D" stroke-width="2" fill="none"/>
+  <path d="M175 295 Q178 280 182 295" stroke="#6DB52D" stroke-width="1.5" fill="none"/>
+  <path d="M320 295 Q325 278 330 295" stroke="#6DB52D" stroke-width="2" fill="none"/>
+  <!-- Steker 1 - Wortel/Carrot -->
+  <rect x="97" y="150" width="6" height="150" fill="#8B7355" rx="2"/>
+  <rect x="80" y="120" width="40" height="40" fill="#2C6C13" rx="6" stroke="#1a3a08" stroke-width="1.5"/>
+  <!-- Carrot icon -->
+  <path d="M100 132 L95 152 L105 152 Z" fill="#FFB30F"/>
+  <line x1="100" y1="132" x2="100" y2="126" stroke="#6DB52D" stroke-width="2" stroke-linecap="round"/>
+  <line x1="97" y1="130" x2="94" y2="124" stroke="#6DB52D" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="103" y1="130" x2="106" y2="124" stroke="#6DB52D" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Steker 2 - Tomaat/Tomato -->
+  <rect x="197" y="130" width="6" height="170" fill="#8B7355" rx="2"/>
+  <rect x="180" y="100" width="40" height="40" fill="#00679A" rx="6" stroke="#004a6a" stroke-width="1.5"/>
+  <!-- Tomato icon -->
+  <circle cx="200" cy="122" r="10" fill="#e84040"/>
+  <path d="M194 114 Q200 110 206 114" stroke="#6DB52D" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Steker 3 - Sla/Lettuce -->
+  <rect x="297" y="165" width="6" height="135" fill="#8B7355" rx="2"/>
+  <rect x="280" y="135" width="40" height="40" fill="#6DB52D" rx="6" stroke="#4a8a1a" stroke-width="1.5"/>
+  <!-- Lettuce icon -->
+  <ellipse cx="300" cy="155" rx="10" ry="8" fill="#90d850"/>
+  <path d="M292 155 Q296 148 300 155" stroke="#6DB52D" stroke-width="1.5" fill="none"/>
+  <path d="M300 155 Q304 148 308 155" stroke="#6DB52D" stroke-width="1.5" fill="none"/>
+  <!-- Extra small plants -->
+  <path d="M135 295 Q140 270 145 295" stroke="#90c870" stroke-width="1.5" fill="none"/>
+  <path d="M250 295 Q255 275 260 295" stroke="#90c870" stroke-width="1.5" fill="none"/>
+  <!-- Watermark -->
+  <text x="200" y="390" font-family="sans-serif" font-size="9" fill="rgba(90,60,30,0.35)" text-anchor="middle" letter-spacing="0.15em">VOORBEELDFOTO</text>
+</svg>

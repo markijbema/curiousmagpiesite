@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff0c0"/>
+      <stop offset="100%" style="stop-color:#ffe89a"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <!-- Soft shadow -->
+  <ellipse cx="200" cy="320" rx="80" ry="15" fill="rgba(0,0,0,0.08)"/>
+  <!-- Card holder base -->
+  <path d="M160 310 Q160 290 170 280 L230 280 Q240 290 240 310 Z" fill="#e8c870" stroke="#c8900a" stroke-width="2"/>
+  <!-- Texture on base -->
+  <ellipse cx="200" cy="298" rx="30" ry="12" fill="#d4b860" opacity="0.5"/>
+  <!-- Card slot -->
+  <rect x="185" y="275" width="30" height="8" fill="#b89848" rx="2"/>
+  <!-- Card in slot -->
+  <rect x="170" y="200" width="60" height="80" fill="#fdf8f0" stroke="#d4c8b0" stroke-width="1.5" rx="3" transform="rotate(-3 200 240)"/>
+  <!-- Card content -->
+  <text x="198" y="230" font-family="Georgia, serif" font-size="10" fill="#8B7355" text-anchor="middle" transform="rotate(-3 200 240)">♥ Lief</text>
+  <text x="198" y="245" font-family="Georgia, serif" font-size="10" fill="#8B7355" text-anchor="middle" transform="rotate(-3 200 240)">kaartje</text>
+  <!-- Small heart on card -->
+  <path d="M192 255 Q190 250 194 250 Q198 250 198 255 Q198 250 202 250 Q206 250 204 255 Q198 264 198 264 Q198 264 192 255" fill="#00679A" opacity="0.4" transform="rotate(-3 200 240)"/>
+  <!-- Worm coming out of holder -->
+  <path d="M230 290 Q245 285 250 275 Q255 265 248 258 Q240 252 235 260" stroke="#c8900a" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M230 290 Q245 285 250 275 Q255 265 248 258 Q240 252 235 260" stroke="#e8c870" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Worm face -->
+  <circle cx="235" cy="258" r="6" fill="#e8c870" stroke="#c8900a" stroke-width="1.5"/>
+  <circle cx="233" cy="256" r="1.5" fill="#1a1008"/>
+  <circle cx="238" cy="256" r="1.5" fill="#1a1008"/>
+  <path d="M233 261 Q235 263 238 261" stroke="#8B7355" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <!-- Cheeks -->
+  <circle cx="230" cy="260" r="2" fill="#FFB30F" opacity="0.4"/>
+  <circle cx="241" cy="260" r="2" fill="#FFB30F" opacity="0.4"/>
+  <!-- Small decorative elements -->
+  <circle cx="140" cy="340" r="5" fill="#6DB52D" opacity="0.3"/>
+  <circle cx="155" cy="345" r="3" fill="#00679A" opacity="0.2"/>
+  <circle cx="260" cy="342" r="4" fill="#FFB30F" opacity="0.3"/>
+  <!-- Watermark -->
+  <text x="200" y="390" font-family="sans-serif" font-size="9" fill="rgba(90,60,30,0.35)" text-anchor="middle" letter-spacing="0.15em">VOORBEELDFOTO</text>
+</svg>
