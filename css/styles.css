@@ -1,23 +1,30 @@
 /* ── Custom Properties ── */
 :root {
-  /* Fiep Westendorp / retro 50s-60s palette */
+  /* Curious Magpie brand palette */
   --color-cream: #fdf8f0;
   --color-warm-white: #fffef8;
 
-  /* Playful primaries */
-  --color-poppy: #e8392a;
-  --color-sunflower: #f5c842;
-  --color-sky: #4a9fd4;
-  --color-grass: #5aaa5a;
-  --color-tangerine: #f07d2a;
-  --color-lilac: #b87fc4;
+  /* Brand colors */
+  --color-primary: #00679A;      /* Deep blue */
+  --color-secondary: #207FA6;    /* Medium blue */
+  --color-accent-green: #6DB52D; /* Light green */
+  --color-accent-dark: #2C6C13;  /* Dark green */
+  --color-accent-yellow: #FFB30F; /* Yellow/gold */
 
-  /* Soft pastels */
-  --color-blush: #f9d4cc;
-  --color-mint: #c8e8c8;
-  --color-butter: #fdf0a8;
-  --color-powder: #c8dff0;
-  --color-lavender: #e0d0f0;
+  /* Aliases for semantic use */
+  --color-poppy: #00679A;        /* Now deep blue */
+  --color-sunflower: #FFB30F;    /* Now yellow/gold */
+  --color-sky: #207FA6;          /* Now medium blue */
+  --color-grass: #6DB52D;        /* Now light green */
+  --color-tangerine: #FFB30F;    /* Now yellow */
+  --color-lilac: #2C6C13;        /* Now dark green */
+
+  /* Soft pastels (derived from brand colors) */
+  --color-blush: #b3d8ea;     /* light from deep blue */
+  --color-mint: #d4eeb8;      /* light from light green */
+  --color-butter: #fff0c0;    /* light from yellow/gold */
+  --color-powder: #c0e0f0;    /* light from medium blue */
+  --color-lavender: #c4deb0;  /* light from dark green */
 
   /* Ink / outline */
   --color-ink: #1a1008;
@@ -154,9 +161,21 @@ ul {
 
 .logo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
   line-height: 1;
   text-decoration: none;
+}
+
+.logo-img {
+  height: 3rem;
+  width: auto;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
 }
 
 .logo-name {

@@ -15,6 +15,12 @@ The site has been converted from a Next.js app to a plain static HTML/CSS site. 
 - [x] GitHub Pages serves directly from `main` branch (no build step, no Actions workflow)
 - [x] Removed all Next.js dependencies (package.json, tsconfig, next.config, etc.)
 - [x] Google Fonts loaded via CDN (Playfair Display + Lato)
+- [x] Added ekster.svg logo to header on all 4 pages (displayed alongside text logo)
+- [x] Updated color palette to 5-color brand palette: #00679A, #207FA6, #6DB52D, #2C6C13, #FFB30F
+- [x] Updated color stripe from 6 bands to 5 bands matching new palette
+- [x] Updated all inline colors across all 4 HTML pages to match new palette
+- [x] Updated CSS custom properties and pastel derivations for new palette
+- [x] Added `.logo-img` and `.logo-text` CSS classes for logo layout
 
 ## Current Structure
 
@@ -71,3 +77,4 @@ python3 -m http.server 8000
 | Initial | Template created with base Next.js setup |
 | Previous | Built full Curious Magpie ceramics website (4 pages + components) |
 | 2026-02-22 | Converted from Next.js to plain static HTML/CSS for GitHub Pages hosting |
+| 2026-02-22 | Added ekster.svg logo to header, updated to 5-color brand palette (#00679A, #207FA6, #6DB52D, #2C6C13, #FFB30F) |
