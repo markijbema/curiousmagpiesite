@@ -94,6 +94,12 @@ python3 -m http.server 8000
 2. Copy the header/footer from an existing page
 3. Add navigation links to all pages
 
+## Recently Completed (cont.)
+
+- [x] **Replaced LLM-generated text with real content from Marjolein**
+  - Home about section: "Even voorstellen" — personal introduction by Marjolein (background, journey to ceramics, inspiration)
+  - Products page intro: description of product range and invitation to visit markets
+
 ## Session History
 
 | Date | Changes |
@@ -107,3 +113,4 @@ python3 -m http.server 8000
 | 2026-02-22 | Simplified header: removed duplicate name text, enlarged logo, single green stripe, solid section backgrounds |
 | 2026-02-22 | Created SVG favicon from ekster.svg (cropped to head + disco ball, text removed), updated all HTML pages to reference it |
 | 2026-02-22 | Moved all inline color styles to CSS classes; headers now use accent blue (#00679A); greens kept for backgrounds |
+| 2026-02-26 | Replaced LLM-generated texts with real content: "Even voorstellen" on home page, product range intro on products page |
