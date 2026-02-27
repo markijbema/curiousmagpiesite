@@ -730,6 +730,37 @@ ul {
   order: 1;
 }
 
+.about-story article::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.about-float-image {
+  float: right;
+  width: 46%;
+  max-width: 240px;
+  margin: 0.15rem 0 1rem 1.25rem;
+}
+
+.about-float-left {
+  float: left;
+  margin: 0.15rem 1.25rem 1rem 0;
+}
+
+@media (max-width: 767px) {
+  .about-float-image {
+    float: none;
+    width: 72%;
+    max-width: 240px;
+    margin: 0 0 0.9rem;
+  }
+
+  .about-float-left {
+    margin: 0 0 0.9rem;
+  }
+}
+
 .featured-section {
   padding: 5rem 0;
 }
