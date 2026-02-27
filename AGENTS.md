@@ -1,3 +1,7 @@
+## File Organization
+
+When creating markdown files that should not be public or committed to the repository (such as client notes, local plans, or sensitive documentation), write them to the `local_plans/` directory. This directory is ignored by git and will not be committed.
+
 ## Optional Feature Guides
 
 When users request features beyond the base template, check for available recipes in `.kilocode/recipes/`.
