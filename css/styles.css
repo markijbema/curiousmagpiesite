@@ -952,25 +952,39 @@ ul {
 
 .market-card-placeholder {
   background-color: #faf7f2;
-  border-color: #d0c0a0;
-  opacity: 0.7;
-  box-shadow: 2px 2px 0 #d0c0a0;
+  border-color: #c0b090;
+  box-shadow: 2px 2px 0 #c0b090;
 }
 
 .market-card-placeholder .market-title,
 .market-card-placeholder .location-text {
-  opacity: 0.6;
+  opacity: 0.75;
 }
 
-.market-card-placeholder .date-badge {
-  background-color: #e8e0d0;
-  border-color: #d0c0a0;
+.market-card-placeholder .date-badge-gold {
+  background-color: #f5e6b8;
+  border-color: #e6c97a;
+  opacity: 0.8;
 }
 
-.market-card-placeholder .time-badge {
-  background-color: #e8e0d0;
-  border-color: #d0c0a0;
+.market-card-placeholder .date-badge-blue {
+  background-color: #d0e8f5;
+  border-color: #9bc4d8;
+  opacity: 0.8;
+}
+
+.market-card-placeholder .time-badge-gold {
+  background-color: #f5e6b8;
+  border-color: #e6c97a;
   color: #8a6020;
+  opacity: 0.8;
+}
+
+.market-card-placeholder .time-badge-blue {
+  background-color: #d0e8f5;
+  border-color: #9bc4d8;
+  color: #00679A;
+  opacity: 0.8;
 }
 
 .market-card-inner {
