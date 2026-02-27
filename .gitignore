@@ -10,3 +10,6 @@ Thumbs.db
 
 # Misc
 *.log
+
+# Local plans and client files
+local_plans/
