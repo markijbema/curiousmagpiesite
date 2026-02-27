@@ -950,6 +950,29 @@ ul {
   box-shadow: 3px 3px 0 var(--color-ink);
 }
 
+.market-card-placeholder {
+  background-color: #faf7f2;
+  border-color: #d0c0a0;
+  opacity: 0.7;
+  box-shadow: 2px 2px 0 #d0c0a0;
+}
+
+.market-card-placeholder .market-title,
+.market-card-placeholder .location-text {
+  opacity: 0.6;
+}
+
+.market-card-placeholder .date-badge {
+  background-color: #e8e0d0;
+  border-color: #d0c0a0;
+}
+
+.market-card-placeholder .time-badge {
+  background-color: #e8e0d0;
+  border-color: #d0c0a0;
+  color: #8a6020;
+}
+
 .market-card-inner {
   display: flex;
   align-items: flex-start;
