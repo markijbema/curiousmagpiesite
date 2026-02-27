@@ -347,26 +347,6 @@ ul {
   line-height: 1.7;
 }
 
-.footer-nav h4 {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--color-tangerine);
-  margin-bottom: 0.75rem;
-}
-
-.footer-nav ul {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.footer-nav a {
-  font-size: 0.875rem;
-  color: #c0a880;
-  text-decoration: none;
-}
 
 .footer-social h4 {
   font-size: 0.7rem;
