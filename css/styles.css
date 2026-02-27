@@ -740,6 +740,18 @@ ul {
   text-decoration: none;
 }
 
+.link-cta {
+  font-weight: 700;
+  color: var(--color-warm-white);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.link-cta:hover {
+  color: var(--color-accent-gold);
+}
+
 /* Contact card label colors */
 .contact-card-label-green { color: var(--color-secondary); }
 .contact-card-label-gold  { color: var(--color-accent-gold); }
