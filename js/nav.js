@@ -1,5 +1,15 @@
 // Mobile navigation toggle
 document.addEventListener("DOMContentLoaded", function () {
+  var animateVariant = new URLSearchParams(window.location.search).get("animate");
+  if (/^[1-3]$/.test(animateVariant)) {
+    document.querySelectorAll(".logo-img").forEach(function (logoImg) {
+      logoImg.src = logoImg.src.replace(
+        /ekster(?:-ani[1-3])?\.svg$/,
+        "ekster-ani" + animateVariant + ".svg"
+      );
+    });
+  }
+
   var btn = document.getElementById("menu-toggle");
   var menu = document.getElementById("mobile-menu");
   var iconOpen = document.getElementById("icon-open");
