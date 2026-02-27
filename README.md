@@ -2,6 +2,8 @@
 
 Static website for Curious Magpie, the ceramics atelier of Marjolein IJbema.
 
+🌐 **Live site:** [https://markijbema.github.io/curiousmagpiesite/](https://markijbema.github.io/curiousmagpiesite/)
+
 ## View locally
 
 This is a plain HTML/CSS site — no build step required.
@@ -40,5 +42,7 @@ favicon.ico             Browser tab icon
 ## Deployment
 
 The site is hosted on GitHub Pages, served directly from the `main` branch (no build step, no Actions workflow needed).
+
+🌐 **Live site:** [https://markijbema.github.io/curiousmagpiesite/](https://markijbema.github.io/curiousmagpiesite/)
 
 To deploy: push to `main`. Changes go live within a minute.
