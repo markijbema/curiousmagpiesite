@@ -8,42 +8,13 @@ The site has been converted from a Next.js app to a plain static HTML/CSS site. 
 
 ## Recently Completed
 
-- [x] **Moved all inline color styles to CSS classes** — no more hardcoded colors in HTML `style` attributes
-- [x] **Headers now use accent blue (#00679A)** — page titles, section titles, card titles all use `--color-accent-blue`
-- [x] **Greens kept for backgrounds** — CTA sections, badges, section backgrounds remain green-dominant
-- [x] Added 50+ utility CSS classes: `.page-title`, `.section-title`, `.body-text`, `.badge-green`, `.bg-blush`, `.text-blue`, etc.
-- [x] Created SVG favicon (`favicon.svg`) from ekster.svg — cropped to bird head + disco ball, text removed
-- [x] Updated all 4 HTML pages to reference `favicon.svg` instead of `favicon.ico`
-- [x] Removed `favicon.ico` (no longer needed)
-- [x] Converted from Next.js to plain static HTML/CSS
-- [x] Created 4 HTML pages (index, producten, agenda, contact)
-- [x] Created shared CSS file (css/styles.css) with all design tokens and utility classes
-- [x] Created vanilla JS for mobile navigation (js/nav.js)
-- [x] GitHub Pages serves directly from `main` branch (no build step, no Actions workflow)
-- [x] Removed all Next.js dependencies (package.json, tsconfig, next.config, etc.)
-- [x] Google Fonts loaded via CDN (Playfair Display + Lato)
-- [x] Added ekster.svg logo to header on all 4 pages (displayed alongside text logo)
-- [x] Updated color palette to 5-color brand palette: #00679A, #207FA6, #6DB52D, #2C6C13, #FFB30F
-- [x] Updated color stripe from 6 bands to 5 bands matching new palette
-- [x] Updated all inline colors across all 4 HTML pages to match new palette
-- [x] Updated CSS custom properties and pastel derivations for new palette
-- [x] Added `.logo-img` and `.logo-text` CSS classes for logo layout
-- [x] Removed dotted background pattern (`.dot-bg`), replaced with solid `var(--color-butter)` background
-- [x] Created 8 SVG stub illustrations in `images/` directory (hero, atelier, 6 products)
-- [x] Replaced all "Foto volgt" placeholder boxes with actual SVG illustrations on index.html and producten/index.html
-- [x] Added CSS classes for images: `.product-img`, `.img-frame`, `.card-img`, `.photo-strip-item`
-- [x] **Green is now the dominant/primary color** — swapped roles: greens (#2C6C13, #6DB52D) are primary/secondary, blues (#00679A, #207FA6) are accents
-- [x] Updated `--color-cream` to `#f5f9f0` (soft green tint instead of warm cream)
-- [x] Color stripe reordered: greens first, then yellow, then blues
-- [x] CTA banner changed from blue to dark green
-- [x] All badges, labels, and inline colors updated across all 4 pages to use green-dominant palette
-- [x] **Made design more playful/rounder** — all border-radius changed from angular `4px 16px 4px 16px` to `20px` or `999px` (full pill) for buttons, badges, cards, contact cards, info boxes, market cards, photo strip items
-- [x] `.dot-bg` now uses `var(--color-mint)` (soft green) instead of `var(--color-butter)`
-- [x] Stripe pattern uses green-tinted stripes instead of yellow
-- [x] Removed "Curious Magpie" text from logo (ekster.svg already contains it), kept only "keramiek atelier" subtitle
-- [x] Made logo image larger (5rem instead of 3rem)
-- [x] Replaced 5-color stripe with single solid green bar (#6DB52D)
-- [x] Replaced striped background behind "greep uit de collectie" with solid `var(--color-mint)`
+- [x] **Design review & cleanup (2026-02-27)**:
+  - Replaced agenda placeholder cards with simple "more dates coming" text
+  - Accessibility: added skip-nav link, aria-expanded on hamburger, aria-hidden on decorative emoji
+  - Moved all inline styles to CSS classes (hero-img-frame, about-section, contact-grid, product card rotations via nth-child, etc.)
+  - CSS cleanup: removed 6 duplicate color alias variables, ~30 unused classes, unnecessary !important — reduced CSS by ~293 lines
+  - Added `loading="lazy"` to all below-the-fold images
+  - Updated products CTA to clarify purchase options (markets + email)
 
 ## Current Structure
 
@@ -114,3 +85,4 @@ python3 -m http.server 8000
 | 2026-02-22 | Created SVG favicon from ekster.svg (cropped to head + disco ball, text removed), updated all HTML pages to reference it |
 | 2026-02-22 | Moved all inline color styles to CSS classes; headers now use accent blue (#00679A); greens kept for backgrounds |
 | 2026-02-26 | Replaced LLM-generated texts with real content: "Even voorstellen" on home page, product range intro on products page |
+| 2026-02-27 | Design review & cleanup: accessibility fixes, CSS cleanup (-293 lines), lazy loading, removed placeholder cards, updated products CTA |
