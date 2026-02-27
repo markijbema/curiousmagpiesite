@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   btn.addEventListener("click", function () {
     var isOpen = menu.classList.toggle("open");
+    btn.setAttribute("aria-expanded", isOpen);
+    btn.setAttribute("aria-label", isOpen ? "Menu sluiten" : "Menu openen");
     iconOpen.style.display = isOpen ? "none" : "block";
     iconClose.style.display = isOpen ? "block" : "none";
   });

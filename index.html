@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Naar hoofdinhoud</a>
 
   <!-- ── HEADER ── -->
   <header class="site-header">
@@ -26,7 +27,7 @@
         <a href="agenda/" class="nav-link">Agenda</a>
         <a href="contact/" class="nav-link">Contact</a>
       </nav>
-      <button class="hamburger" id="menu-toggle" aria-label="Menu openen">
+      <button class="hamburger" id="menu-toggle" aria-label="Menu openen" aria-expanded="false" aria-controls="mobile-menu">
         <svg id="icon-open" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -43,7 +44,7 @@
     </div>
   </header>
 
-  <main class="bg-cream">
+  <main id="main-content" class="bg-cream">
 
     <!-- ── HERO ── -->
     <section class="dot-bg wave-bottom">
@@ -146,7 +147,7 @@
     <!-- ── CTA BANNER ── -->
     <section class="wave-top wave-top-green cta-section-lg">
       <div class="container-2xs">
-        <div class="emoji-decoration">📅</div>
+        <div class="emoji-decoration" aria-hidden="true">📅</div>
         <h2 class="section-title-cta-lg">Kom me vinden op de markt!</h2>
         <p class="body-cta-lg">
           Regelmatig sta ik op markten in de regio. Bekijk de agenda voor actuele data.

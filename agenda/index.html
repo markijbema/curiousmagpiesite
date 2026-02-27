@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Naar hoofdinhoud</a>
 
   <!-- ── HEADER ── -->
   <header class="site-header">
@@ -26,7 +27,7 @@
         <a href="../agenda/" class="nav-link active">Agenda</a>
         <a href="../contact/" class="nav-link">Contact</a>
       </nav>
-      <button class="hamburger" id="menu-toggle" aria-label="Menu openen">
+      <button class="hamburger" id="menu-toggle" aria-label="Menu openen" aria-expanded="false" aria-controls="mobile-menu">
         <svg id="icon-open" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -43,7 +44,7 @@
     </div>
   </header>
 
-  <main class="bg-cream">
+  <main id="main-content" class="bg-cream">
 
     <!-- ── PAGE HEADER ── -->
     <section class="dot-bg wave-bottom section-pad">
@@ -69,7 +70,7 @@
             <div>
               <span class="date-badge date-badge-green">Zaterdag 23 mei 2026</span>
               <h3 class="market-title">Kunstmarkt Stadskanaal</h3>
-              <p class="location-text">📍 Centrum Stadskanaal</p>
+              <p class="location-text"><span aria-hidden="true">📍</span> Centrum Stadskanaal</p>
             </div>
             <span class="time-badge time-badge-green-dark">10:00 – 17:00</span>
           </div>
