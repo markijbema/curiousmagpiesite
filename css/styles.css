@@ -11,20 +11,10 @@
   --color-accent-brown: #4C2E05; /* Dark brown */
   --color-accent-blue: #00679A;  /* Deep blue */
 
-  /* Aliases for semantic use */
-  --color-poppy: #2C3D01;        /* Dark olive = primary dark */
-  --color-sunflower: #5C8001;    /* Olive green = primary */
-  --color-sky: #00679A;          /* Deep blue accent */
-  --color-grass: #5C8001;        /* Olive green */
-  --color-tangerine: #FFB30F;    /* Bright yellow */
-  --color-lilac: #00679A;        /* Deep blue accent */
-
   /* Soft pastels (derived from brand colors) */
   --color-blush: #d8e4a8;     /* light olive */
   --color-mint: #e4ecc8;      /* lighter olive */
   --color-butter: #faecc0;    /* light from gold */
-  --color-powder: #c0e0f0;    /* light from blue */
-  --color-lavender: #b3d8ea;  /* light from deep blue */
 
   /* Ink / outline */
   --color-ink: #4C2E05;
@@ -98,7 +88,7 @@ ul {
 /* ── Wavy section dividers ── */
 .wave-bottom {
   position: relative;
-  border-bottom: none !important;
+  border-bottom: none;
   padding-bottom: 3rem;
   margin-bottom: 0;
 }
@@ -118,7 +108,7 @@ ul {
 
 .wave-top {
   position: relative;
-  border-top: none !important;
+  border-top: none;
   padding-top: 3rem;
   margin-top: 0;
 }
@@ -192,12 +182,12 @@ ul {
 
 .color-stripe {
   height: 6px;
-  background-color: #5C8001;
+  background-color: var(--color-primary);
 }
 
 .color-stripe-thin {
   height: 4px;
-  background-color: #5C8001;
+  background-color: var(--color-primary);
 }
 
 .nav-bar {
@@ -219,27 +209,6 @@ ul {
 .logo-img {
   height: 6.5rem;
   width: auto;
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.logo-name {
-  font-family: var(--font-display);
-  font-size: 1.75rem;
-  color: var(--color-ink);
-  letter-spacing: -0.01em;
-  line-height: 1;
-}
-
-.logo-sub {
-  font-size: 0.65rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--color-poppy);
-  font-weight: 700;
 }
 
 .desktop-nav {
@@ -274,7 +243,7 @@ ul {
 }
 
 .nav-link.active {
-  background-color: var(--color-sunflower);
+  background-color: var(--color-primary);
   color: #fdf8f0;
 }
 
@@ -328,7 +297,7 @@ ul {
 }
 
 .mobile-nav-link.active {
-  background-color: var(--color-sunflower);
+  background-color: var(--color-primary);
 }
 
 /* ── Footer ── */
@@ -336,7 +305,7 @@ ul {
   background-color: var(--color-ink);
   color: var(--color-cream);
   margin-top: 0;
-  border-top: 4px solid var(--color-grass);
+  border-top: 4px solid var(--color-primary);
 }
 
 .footer-bottom {
@@ -385,17 +354,17 @@ ul {
 }
 
 .btn-primary {
-  background-color: var(--color-poppy);
+  background-color: var(--color-secondary);
   color: #fdf8f0;
 }
 
 .btn-green {
-  background-color: var(--color-sunflower);
+  background-color: var(--color-primary);
   color: #fdf8f0;
 }
 
 .btn-yellow {
-  background-color: var(--color-tangerine);
+  background-color: var(--color-accent-gold);
   color: var(--color-ink);
 }
 
@@ -405,45 +374,8 @@ ul {
 }
 
 .btn-blue {
-  background-color: var(--color-sky);
+  background-color: var(--color-accent-blue);
   color: #fdf8f0;
-}
-
-/* ── Badge ── */
-.badge {
-  display: inline-block;
-  padding: 6px 18px;
-  border: 2.5px solid var(--color-ink);
-  border-radius: 999px;
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-.badge-sm {
-  display: inline-block;
-  padding: 3px 10px;
-  border: 1.5px solid var(--color-ink);
-  border-radius: 999px;
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-/* ── Section label ── */
-.section-label {
-  display: inline-block;
-  padding: 5px 14px;
-  border: 2px solid var(--color-ink);
-  border-radius: 999px;
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--color-ink);
-  margin-bottom: 1rem;
 }
 
 /* ── Card ── */
@@ -455,10 +387,6 @@ ul {
   box-shadow: 4px 4px 0 var(--color-ink);
 }
 
-.card-alt {
-  border-radius: 20px;
-}
-
 .card-img-wrapper {
   border-bottom: 2.5px solid var(--color-ink);
   overflow: hidden;
@@ -466,29 +394,6 @@ ul {
 
 .card-body {
   padding: 1.25rem;
-}
-
-/* ── Placeholder box ── */
-.placeholder-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  border: 3px solid var(--color-ink);
-  border-radius: 20px;
-}
-
-.placeholder-icon {
-  font-size: 2.5rem;
-}
-
-.placeholder-label {
-  font-size: 0.75rem;
-  color: #7a5a30;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
 }
 
 /* ── Product / content images ── */
@@ -510,19 +415,6 @@ ul {
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-.photo-strip-item {
-  overflow: hidden;
-  border: 2.5px solid var(--color-ink);
-}
-
-.photo-strip-item:nth-child(odd) {
-  border-radius: 20px;
-}
-
-.photo-strip-item:nth-child(even) {
-  border-radius: 20px;
 }
 
 /* ── Grid layouts ── */
@@ -558,18 +450,6 @@ ul {
   }
 }
 
-.grid-4 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-
-@media (min-width: 768px) {
-  .grid-4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
 /* ── Aspect ratios ── */
 .aspect-square {
   aspect-ratio: 1 / 1;
@@ -587,11 +467,6 @@ ul {
 .text-green-dark { color: var(--color-secondary); }
 .text-green      { color: var(--color-primary); }
 .text-blue       { color: var(--color-accent-blue); }
-.text-gold-dark  { color: #8a6020; }
-.text-muted      { color: #c0a880; }
-.text-light      { color: var(--color-cream); }
-.text-warm-white { color: var(--color-warm-white); }
-.text-blush      { color: var(--color-blush); }
 
 /* Background colors */
 .bg-cream      { background-color: var(--color-cream); }
@@ -602,8 +477,6 @@ ul {
 .bg-blush      { background-color: var(--color-blush); }
 .bg-butter     { background-color: var(--color-butter); }
 .bg-mint       { background-color: var(--color-mint); }
-.bg-powder     { background-color: var(--color-powder); }
-.bg-olive      { background-color: #d0dca0; }
 
 /* ── Typography ── */
 
@@ -666,13 +539,6 @@ ul {
   margin-bottom: 0.2rem;
 }
 
-/* Past events title */
-.section-title-past {
-  font-size: 1.4rem;
-  color: #8a6020;
-  margin-bottom: 1.25rem;
-}
-
 /* Lead / intro text */
 .lead {
   color: var(--color-ink-soft);
@@ -713,13 +579,6 @@ ul {
   font-size: 0.8rem;
   color: #8a6020;
   margin-top: 0.2rem;
-}
-
-.body-note {
-  font-size: 0.75rem;
-  color: #8a6020;
-  margin-top: 0.25rem;
-  font-style: italic;
 }
 
 .body-cta {
@@ -806,95 +665,14 @@ ul {
   margin-bottom: 0.5rem;
 }
 
-/* Instagram note box */
-.instagram-note {
-  margin-top: 2.5rem;
-  background-color: var(--color-blush);
-  border: 2.5px solid var(--color-ink);
-  border-radius: 20px;
-  padding: 1.25rem 1.5rem;
-  text-align: center;
-  box-shadow: 3px 3px 0 var(--color-ink);
-}
-
-.instagram-note p {
-  font-size: 0.9rem;
-  color: var(--color-ink-soft);
-  line-height: 1.7;
-}
-
-/* Past market entry */
-.past-market-name {
-  font-weight: 600;
-}
-
-/* Badge color variants */
-.badge-green {
-  background-color: var(--color-primary);
-  color: var(--color-warm-white);
-}
-
-.badge-green-dark {
-  background-color: var(--color-secondary);
-  color: var(--color-warm-white);
-}
-
-.badge-gold {
-  background-color: var(--color-accent-gold);
-  color: var(--color-ink);
-}
-
-/* Badge-sm color variants */
-.badge-sm-green {
-  background-color: var(--color-primary);
-  color: var(--color-warm-white);
-  margin-bottom: 0.5rem;
-}
-
-.badge-sm-green-dark {
-  background-color: var(--color-secondary);
-  color: var(--color-warm-white);
-  margin-bottom: 0.5rem;
-}
-
-.badge-sm-gold {
-  background-color: var(--color-accent-gold);
-  color: var(--color-ink);
-  margin-bottom: 0.5rem;
-}
-
-/* Section label variant */
-.section-label-green {
-  background-color: var(--color-blush);
-  color: var(--color-secondary);
-}
-
 /* Date badge variants */
 .date-badge-green {
   background-color: var(--color-blush);
   border: 2px solid var(--color-primary);
 }
 
-.date-badge-gold {
-  background-color: var(--color-butter);
-  border: 2px solid var(--color-accent-gold);
-}
-
-.date-badge-blue {
-  background-color: var(--color-powder);
-  border: 2px solid var(--color-accent-blue);
-}
-
-.date-badge-olive {
-  background-color: #d0dca0;
-  border: 2px solid var(--color-secondary);
-}
-
 /* Time badge variants */
 .time-badge-green-dark { background-color: var(--color-secondary); }
-.time-badge-green      { background-color: var(--color-primary); }
-.time-badge-gold       { background-color: var(--color-accent-gold); }
-.time-badge-blue       { background-color: var(--color-accent-blue); }
 
 /* CTA section */
 .cta-section {
@@ -965,12 +743,6 @@ ul {
 .mb-2xl { margin-bottom: 3.5rem; }
 
 .section-pad { padding: 4rem 1.5rem; }
-.section-pad-bottom { padding: 0 1.5rem 4rem; }
-
-/* Tilt transforms */
-.tilt-left  { transform: rotate(-1deg); }
-.tilt-right { transform: rotate(1deg); }
-.tilt-left-sm  { transform: rotate(-1.5deg); }
 
 /* ── Utility ── */
 .text-center {
@@ -996,10 +768,6 @@ ul {
   gap: 1rem;
 }
 
-.stack-lg {
-  gap: 2rem;
-}
-
 /* ── Product card rotate hover ── */
 .product-card {
   transition: transform 0.2s;
@@ -1014,7 +782,7 @@ ul {
 .product-card:nth-child(7) { transform: rotate(-2deg); }
 
 .product-card:hover {
-  transform: rotate(0deg) !important;
+  transform: rotate(0deg);
 }
 
 /* ── Market card ── */
@@ -1024,43 +792,6 @@ ul {
   border-radius: 20px;
   padding: 1.25rem 1.5rem;
   box-shadow: 3px 3px 0 var(--color-ink);
-}
-
-.market-card-placeholder {
-  background-color: #faf7f2;
-  border-color: #c0b090;
-  box-shadow: 2px 2px 0 #c0b090;
-}
-
-.market-card-placeholder .market-title,
-.market-card-placeholder .location-text {
-  opacity: 0.75;
-}
-
-.market-card-placeholder .date-badge-gold {
-  background-color: #f5e6b8;
-  border-color: #e6c97a;
-  opacity: 0.8;
-}
-
-.market-card-placeholder .date-badge-blue {
-  background-color: #d0e8f5;
-  border-color: #9bc4d8;
-  opacity: 0.8;
-}
-
-.market-card-placeholder .time-badge-gold {
-  background-color: #f5e6b8;
-  border-color: #e6c97a;
-  color: #8a6020;
-  opacity: 0.8;
-}
-
-.market-card-placeholder .time-badge-blue {
-  background-color: #d0e8f5;
-  border-color: #9bc4d8;
-  color: #00679A;
-  opacity: 0.8;
 }
 
 .market-card-inner {
@@ -1125,15 +856,3 @@ ul {
   box-shadow: 3px 3px 0 var(--color-ink);
 }
 
-/* ── Past market row ── */
-.past-market {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-  padding: 0.75rem 0;
-  border-bottom: 1.5px dashed #d0c0a0;
-  color: #8a6020;
-  font-size: 0.85rem;
-}
