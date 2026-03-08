@@ -39,15 +39,11 @@ git add -A && git commit -m "message" && git push
 ├── contact/index.html      # Contact page
 ├── css/styles.css          # All styles (single file)
 ├── js/nav.js               # Mobile hamburger menu toggle
-├── images/                 # SVG stub illustrations (8 files)
+├── images/                 # Image assets (photos + a remaining SVG)
 │   ├── hero.svg
-│   ├── atelier.svg
-│   ├── product-vrouwenfiguur.svg
-│   ├── product-slakjes.svg
-│   ├── product-kaartjeshouder.svg
-│   ├── product-paddestoelen.svg
-│   ├── product-groentestekers.svg
-│   └── product-bloemetjeskaartjes.svg
+│   ├── groentestekers.jpg
+│   ├── kaartje.jpg
+│   └── nieuw/...
 ├── ekster.svg              # Full logo (magpie + disco ball + text)
 ├── favicon.svg             # Cropped favicon (head + disco ball)
 ├── .gitignore              # Git ignore rules
