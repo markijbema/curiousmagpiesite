@@ -94,7 +94,7 @@ All styling is in a single `css/styles.css` file with:
 - HTML pages: `index.html` inside named directories
 - CSS: single file `css/styles.css`
 - JS: single file `js/nav.js`
-- Images: descriptive kebab-case (`product-slakjes.svg`, `hero.svg`)
+- Images: descriptive kebab-case (`groentestekers.jpg`, `homepage-foto.jpg`)
 - SVG assets: descriptive names (`ekster.svg`, `favicon.svg`)
 
 ## Fonts

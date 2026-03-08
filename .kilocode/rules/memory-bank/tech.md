@@ -39,8 +39,7 @@ git add -A && git commit -m "message" && git push
 ├── contact/index.html      # Contact page
 ├── css/styles.css          # All styles (single file)
 ├── js/nav.js               # Mobile hamburger menu toggle
-├── images/                 # Image assets (photos + a remaining SVG)
-│   ├── hero.svg
+├── images/                 # Image assets (photos)
 │   ├── groentestekers.jpg
 │   ├── kaartje.jpg
 │   └── nieuw/...
